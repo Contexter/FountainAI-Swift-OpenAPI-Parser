@@ -1,0 +1,9 @@
+
+OpenAPIParser/.DS_Store
+OpenAPIParser/Sources/.DS_Store
+OpenAPIParser/Sources/OpenAPIParser/.DS_Store
+OpenAPIParser/Tests/.DS_Store
+OpenAPIParser/Package.resolved
+*.xcworkspacedata
+*.plist
+*.xcuserstate
