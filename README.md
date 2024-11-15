@@ -69,4 +69,3 @@ Here’s the **prompt template** you can use to guide any language model or docu
 - Ensure the model understands the **context** (e.g., Vapor, OpenAPI, FountainAI services).
 - Review the generated documentation to ensure completeness and accuracy.
 
-Let me know if this structure works for you or if you’d like any adjustments!
