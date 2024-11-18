@@ -12,7 +12,8 @@ struct XMLObject: Codable {
          namespace: String? = nil,
          prefix: String? = nil,
          attribute: Bool? = nil,
-         wrapped: Bool? = nil) {
+         wrapped: Bool? = nil)
+    {
         self.name = name
         self.namespace = namespace
         self.prefix = prefix
@@ -20,4 +21,3 @@ struct XMLObject: Codable {
         self.wrapped = wrapped
     }
 }
-

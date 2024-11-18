@@ -13,7 +13,7 @@ struct OperationObject: Codable {
     let deprecated: Bool?
     let security: [SecurityRequirementObject]?
     let servers: [ServerObject]?
-    
+
     init(tags: [String]? = nil,
          summary: String? = nil,
          description: String? = nil,
@@ -24,7 +24,8 @@ struct OperationObject: Codable {
          responses: ResponsesObject,
          deprecated: Bool? = nil,
          security: [SecurityRequirementObject]? = nil,
-         servers: [ServerObject]? = nil) {
+         servers: [ServerObject]? = nil)
+    {
         self.tags = tags
         self.summary = summary
         self.description = description

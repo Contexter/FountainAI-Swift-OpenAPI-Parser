@@ -3,7 +3,7 @@ import Foundation
 /// Represents the paths and operations available in the API.
 struct PathsObject: Codable {
     let paths: [String: OpenAPIPathItemObject]
-    
+
     init(paths: [String: OpenAPIPathItemObject]) {
         self.paths = paths
     }
@@ -23,7 +23,7 @@ struct OpenAPIPathItemObject: Codable {
     let trace: OperationObject?
     let servers: [ServerObject]?
     let parameters: [ParameterObject]?
-    
+
     init(summary: String? = nil,
          description: String? = nil,
          get: OperationObject? = nil,
@@ -35,7 +35,8 @@ struct OpenAPIPathItemObject: Codable {
          patch: OperationObject? = nil,
          trace: OperationObject? = nil,
          servers: [ServerObject]? = nil,
-         parameters: [ParameterObject]? = nil) {
+         parameters: [ParameterObject]? = nil)
+    {
         self.summary = summary
         self.description = description
         self.get = get

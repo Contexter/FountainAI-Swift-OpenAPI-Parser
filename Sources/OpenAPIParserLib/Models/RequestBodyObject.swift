@@ -5,10 +5,11 @@ struct RequestBodyObject: Codable {
     let description: String?
     let content: [String: MediaTypeObject]
     let required: Bool?
-    
+
     init(description: String? = nil,
          content: [String: MediaTypeObject],
-         required: Bool? = nil) {
+         required: Bool? = nil)
+    {
         self.description = description
         self.content = content
         self.required = required

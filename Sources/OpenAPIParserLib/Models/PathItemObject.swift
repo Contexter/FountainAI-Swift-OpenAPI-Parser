@@ -26,7 +26,8 @@ struct PathItemObject: Codable {
          patch: OperationObject? = nil,
          trace: OperationObject? = nil,
          servers: [ServerObject]? = nil,
-         parameters: [ParameterObject]? = nil) {
+         parameters: [ParameterObject]? = nil)
+    {
         self.summary = summary
         self.description = description
         self.get = get

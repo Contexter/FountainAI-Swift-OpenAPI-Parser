@@ -20,7 +20,8 @@ struct ComponentsObject: Codable {
          headers: [String: HeaderObject]? = nil,
          securitySchemes: [String: SecuritySchemeObject]? = nil,
          links: [String: LinkObject]? = nil,
-         callbacks: [String: CallbackObject]? = nil) {
+         callbacks: [String: CallbackObject]? = nil)
+    {
         self.schemas = schemas
         self.responses = responses
         self.parameters = parameters

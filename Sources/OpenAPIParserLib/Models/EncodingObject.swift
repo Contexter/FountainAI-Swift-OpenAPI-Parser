@@ -7,12 +7,13 @@ struct EncodingObject: Codable {
     let style: String?
     let explode: Bool?
     let allowReserved: Bool?
-    
+
     init(contentType: String? = nil,
          headers: [String: HeaderObject]? = nil,
          style: String? = nil,
          explode: Bool? = nil,
-         allowReserved: Bool? = nil) {
+         allowReserved: Bool? = nil)
+    {
         self.contentType = contentType
         self.headers = headers
         self.style = style
@@ -20,4 +21,3 @@ struct EncodingObject: Codable {
         self.allowReserved = allowReserved
     }
 }
-

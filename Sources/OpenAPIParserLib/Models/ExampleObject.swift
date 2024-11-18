@@ -10,7 +10,8 @@ struct ExampleObject: Codable {
     init(summary: String? = nil,
          description: String? = nil,
          value: AnyCodable? = nil,
-         externalValue: URL? = nil) {
+         externalValue: URL? = nil)
+    {
         self.summary = summary
         self.description = description
         self.value = value

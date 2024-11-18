@@ -18,11 +18,12 @@ struct SecuritySchemeObject: Codable {
          scheme: String? = nil,
          bearerFormat: String? = nil,
          flows: OAuthFlowsObject? = nil,
-         openIdConnectUrl: URL? = nil) {
+         openIdConnectUrl: URL? = nil)
+    {
         self.type = type
         self.description = description
         self.name = name
-        self.`in` = location
+        self.in = location
         self.scheme = scheme
         self.bearerFormat = bearerFormat
         self.flows = flows
@@ -32,10 +33,10 @@ struct SecuritySchemeObject: Codable {
 
 /// Represents the type of security scheme.
 enum SecuritySchemeType: String, Codable {
-    case apiKey = "apiKey"
-    case http = "http"
-    case oauth2 = "oauth2"
-    case openIdConnect = "openIdConnect"
+    case apiKey
+    case http
+    case oauth2
+    case openIdConnect
 }
 
 /// Represents the location of the API key for `apiKey` security schemes.

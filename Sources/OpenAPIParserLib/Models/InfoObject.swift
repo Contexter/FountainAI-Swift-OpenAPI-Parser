@@ -8,13 +8,14 @@ struct InfoObject: Codable {
     let contact: ContactObject?
     let license: LicenseObject?
     let version: String
-    
+
     init(title: String,
          description: String? = nil,
          termsOfService: URL? = nil,
          contact: ContactObject? = nil,
          license: LicenseObject? = nil,
-         version: String) {
+         version: String)
+    {
         self.title = title
         self.description = description
         self.termsOfService = termsOfService

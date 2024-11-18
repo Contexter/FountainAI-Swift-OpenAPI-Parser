@@ -2,12 +2,12 @@ import Foundation
 
 /// The root object of an OpenAPI document, representing the main structure of the API definition.
 struct OpenAPIDocument: Codable {
-    let openapi: String                // Required: OpenAPI version (e.g., "3.0.1").
-    let info: InfoObject               // Required: Provides metadata about the API.
-    let paths: PathsObject             // Required: Holds the relative paths to the individual endpoints and their operations.
-    let components: ComponentsObject?   // Optional: Holds a set of reusable objects for different aspects of the API.
+    let openapi: String // Required: OpenAPI version (e.g., "3.0.1").
+    let info: InfoObject // Required: Provides metadata about the API.
+    let paths: PathsObject // Required: Holds the relative paths to the individual endpoints and their operations.
+    let components: ComponentsObject? // Optional: Holds a set of reusable objects for different aspects of the API.
     let security: [SecurityRequirementObject]? // Optional: Defines a global security scheme applied to all operations.
-    let tags: [TagObject]?              // Optional: A list of tags used by the API for documentation purposes.
+    let tags: [TagObject]? // Optional: A list of tags used by the API for documentation purposes.
     let externalDocs: ExternalDocumentationObject? // Optional: Additional external documentation for this API.
 
     init(

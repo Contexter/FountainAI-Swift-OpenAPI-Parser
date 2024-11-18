@@ -2,7 +2,6 @@ import Foundation
 
 /// A utility class for validating OpenAPI document elements.
 class ValidationUtility {
-    
     /// Validates that a given string is not empty or nil.
     /// - Parameter string: The string to validate.
     /// - Returns: `true` if the string is valid; otherwise, `false`.
@@ -33,9 +32,9 @@ class ValidationUtility {
     /// - Parameter value: The value to check.
     /// - Returns: `true` if the value is not nil; otherwise, `false`.
     static func validateRequiredProperty<T>(_ value: T?) -> Bool {
-        return value != nil
+        value != nil
     }
-    
+
     /// Validates that an array is not empty or nil.
     /// - Parameter array: The array to validate.
     /// - Returns: `true` if the array is valid; otherwise, `false`.
@@ -53,13 +52,13 @@ class ValidationUtility {
             print("Validation Error: Schema title is required.")
             return false
         }
-        
+
         // Ensure that the schema type is not nil
         guard let _ = schema.type else {
             print("Validation Error: Schema type cannot be nil.")
             return false
         }
-        
+
         // Add other schema-specific validation rules as needed
         return true
     }

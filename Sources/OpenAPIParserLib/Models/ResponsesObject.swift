@@ -4,7 +4,7 @@ import Foundation
 struct ResponsesObject: Codable {
     let defaultResponse: ResponseObject?
     let statusResponses: [String: ResponseObject]
-    
+
     init(defaultResponse: ResponseObject? = nil, statusResponses: [String: ResponseObject]) {
         self.defaultResponse = defaultResponse
         self.statusResponses = statusResponses
@@ -17,11 +17,12 @@ struct ResponseObject: Codable {
     let headers: [String: HeaderObject]?
     let content: [String: MediaTypeObject]?
     let links: [String: LinkObject]?
-    
+
     init(description: String,
          headers: [String: HeaderObject]? = nil,
          content: [String: MediaTypeObject]? = nil,
-         links: [String: LinkObject]? = nil) {
+         links: [String: LinkObject]? = nil)
+    {
         self.description = description
         self.headers = headers
         self.content = content

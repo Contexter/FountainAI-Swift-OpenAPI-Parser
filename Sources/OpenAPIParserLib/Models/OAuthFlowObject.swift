@@ -10,7 +10,8 @@ struct OAuthFlowObject: Codable {
     init(authorizationUrl: URL? = nil,
          tokenUrl: URL? = nil,
          refreshUrl: URL? = nil,
-         scopes: [String: String]) {
+         scopes: [String: String])
+    {
         self.authorizationUrl = authorizationUrl
         self.tokenUrl = tokenUrl
         self.refreshUrl = refreshUrl

@@ -9,16 +9,17 @@ struct ParameterObject: Codable {
     let deprecated: Bool?
     let allowEmptyValue: Bool?
     let schema: SchemaObject?
-    
+
     init(name: String,
          in location: ParameterLocation,
          description: String? = nil,
          required: Bool? = nil,
          deprecated: Bool? = nil,
          allowEmptyValue: Bool? = nil,
-         schema: SchemaObject? = nil) {
+         schema: SchemaObject? = nil)
+    {
         self.name = name
-        self.`in` = location
+        self.in = location
         self.description = description
         self.required = required
         self.deprecated = deprecated

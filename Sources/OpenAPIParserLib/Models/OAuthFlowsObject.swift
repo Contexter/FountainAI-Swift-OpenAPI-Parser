@@ -10,7 +10,8 @@ struct OAuthFlowsObject: Codable {
     init(implicit: OAuthFlowObject? = nil,
          password: OAuthFlowObject? = nil,
          clientCredentials: OAuthFlowObject? = nil,
-         authorizationCode: OAuthFlowObject? = nil) {
+         authorizationCode: OAuthFlowObject? = nil)
+    {
         self.implicit = implicit
         self.password = password
         self.clientCredentials = clientCredentials

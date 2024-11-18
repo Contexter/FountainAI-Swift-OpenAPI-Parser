@@ -6,11 +6,12 @@ struct MediaTypeObject: Codable {
     let example: AnyCodable?
     let examples: [String: ExampleObject]?
     let encoding: [String: EncodingObject]?
-    
+
     init(schema: SchemaObject? = nil,
          example: AnyCodable? = nil,
          examples: [String: ExampleObject]? = nil,
-         encoding: [String: EncodingObject]? = nil) {
+         encoding: [String: EncodingObject]? = nil)
+    {
         self.schema = schema
         self.example = example
         self.examples = examples

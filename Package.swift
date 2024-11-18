@@ -4,13 +4,13 @@ import PackageDescription
 let package = Package(
     name: "OpenAPIParser",
     platforms: [
-        .macOS(.v10_15)
+        .macOS(.v10_15),
     ],
     products: [
         .library(name: "OpenAPIParserLib", targets: ["OpenAPIParserLib"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/jpsim/Yams.git", from: "4.0.0")
+        .package(url: "https://github.com/jpsim/Yams.git", from: "4.0.0"),
     ],
     targets: [
         .target(

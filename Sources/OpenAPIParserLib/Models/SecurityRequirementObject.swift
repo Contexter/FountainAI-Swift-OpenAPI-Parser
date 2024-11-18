@@ -17,7 +17,7 @@ struct SecurityRequirementObject: Codable {
             requirementsDict[key.stringValue] = scopes
         }
 
-        self.requirements = requirementsDict
+        requirements = requirementsDict
     }
 
     func encode(to encoder: Encoder) throws {

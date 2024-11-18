@@ -22,7 +22,8 @@ struct HeaderObject: Codable {
          schema: SchemaObject? = nil,
          example: AnyCodable? = nil,
          examples: [String: ExampleObject]? = nil,
-         content: [String: MediaTypeObject]? = nil) {
+         content: [String: MediaTypeObject]? = nil)
+    {
         self.description = description
         self.required = required
         self.deprecated = deprecated

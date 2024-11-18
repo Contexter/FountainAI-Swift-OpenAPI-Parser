@@ -8,7 +8,8 @@ struct TagObject: Codable {
 
     init(name: String,
          description: String? = nil,
-         externalDocs: ExternalDocumentationObject? = nil) {
+         externalDocs: ExternalDocumentationObject? = nil)
+    {
         self.name = name
         self.description = description
         self.externalDocs = externalDocs

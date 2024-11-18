@@ -30,7 +30,8 @@ class SchemaObject: Codable {
          nullable: Bool? = nil,
          readOnly: Bool? = nil,
          writeOnly: Bool? = nil,
-         deprecated: Bool? = nil) {
+         deprecated: Bool? = nil)
+    {
         self.title = title
         self.type = type
         self.properties = properties
@@ -77,9 +78,9 @@ indirect enum AdditionalProperties: Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
-        case .boolean(let boolValue):
+        case let .boolean(boolValue):
             try container.encode(boolValue)
-        case .schema(let schemaValue):
+        case let .schema(schemaValue):
             try container.encode(schemaValue)
         }
     }

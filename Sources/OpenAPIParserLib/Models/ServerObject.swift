@@ -8,7 +8,8 @@ struct ServerObject: Codable {
 
     init(url: String,
          description: String? = nil,
-         variables: [String: ServerVariableObject]? = nil) {
+         variables: [String: ServerVariableObject]? = nil)
+    {
         self.url = url
         self.description = description
         self.variables = variables
@@ -23,7 +24,8 @@ struct ServerVariableObject: Codable {
 
     init(enumValues: [String]? = nil,
          defaultValue: String,
-         description: String? = nil) {
+         description: String? = nil)
+    {
         self.enumValues = enumValues
         self.defaultValue = defaultValue
         self.description = description

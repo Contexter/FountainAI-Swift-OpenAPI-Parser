@@ -19,7 +19,7 @@ class OpenAPIParser {
         } catch {
             throw ParserError.fileNotFound
         }
-        
+
         // Decode data into OpenAPIDocument
         do {
             let document = try JSONDecoder().decode(OpenAPIDocument.self, from: data)

@@ -1,0 +1,28 @@
+openapi: 3.1.0
+info:
+  title: Character Service
+  version: "1.0.0"
+paths:
+  /characters:
+    get:
+      summary: Get all characters
+      responses:
+        '200':
+          description: A list of characters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Character'
+components:
+  schemas:
+    Character:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string

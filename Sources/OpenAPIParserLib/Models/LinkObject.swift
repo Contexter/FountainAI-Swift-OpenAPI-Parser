@@ -14,7 +14,8 @@ struct LinkObject: Codable {
          parameters: [String: AnyCodable]? = nil,
          requestBody: AnyCodable? = nil,
          description: String? = nil,
-         server: ServerObject? = nil) {
+         server: ServerObject? = nil)
+    {
         self.operationRef = operationRef
         self.operationId = operationId
         self.parameters = parameters

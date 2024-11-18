@@ -19,7 +19,7 @@ struct AnyCodable: Codable {
         } else if let boolValue = try? container.decode(Bool.self) {
             value = boolValue
         } else if let arrayValue = try? container.decode([AnyCodable].self) {
-            value = arrayValue.map { $0.value }
+            value = arrayValue.map(\.value)
         } else if let dictionaryValue = try? container.decode([String: AnyCodable].self) {
             value = dictionaryValue.mapValues { $0.value }
         } else {
