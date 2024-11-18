@@ -1,0 +1,4 @@
+module OpenAPIParserLib {
+    header "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserLib.build/OpenAPIParserLib-Swift.h"
+    requires objc
+}

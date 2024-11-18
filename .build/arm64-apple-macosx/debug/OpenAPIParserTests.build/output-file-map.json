@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserTests.build/master.swiftdeps"
+  },
+  "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/OpenAPIParserTests.swift": {
+    "dependencies": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserTests.build/OpenAPIParserTests.d",
+    "object": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserTests.build/OpenAPIParserTests.swift.o",
+    "swiftmodule": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserTests.build/OpenAPIParserTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserTests.build/OpenAPIParserTests.swiftdeps"
+  }
+}
