@@ -1,9 +1,31 @@
+# macOS-specific files
+.DS_Store
 
-OpenAPIParser/.DS_Store
-OpenAPIParser/Sources/.DS_Store
-OpenAPIParser/Sources/OpenAPIParser/.DS_Store
-OpenAPIParser/Tests/.DS_Store
-OpenAPIParser/Package.resolved
-*.xcworkspacedata
-*.plist
+# Build files and directories
+.build/
+
+# Xcode and SwiftPM-related files
+*.xcodeproj
+*.xcworkspace
 *.xcuserstate
+*.xcscheme
+*.plist
+*.xccheckout
+*.swiftsourceinfo
+
+# Logs and debugging
+*.log
+*.swp
+*.swo
+
+# YAML and other configuration artifacts (if not required in the repo)
+*.yaml
+
+# Git-specific files
+.git/
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+*~

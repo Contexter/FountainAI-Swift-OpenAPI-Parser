@@ -1,4 +1,0 @@
-module OpenAPIParserPackageTests {
-    header "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/.build/arm64-apple-macosx/debug/OpenAPIParserPackageTests.build/OpenAPIParserPackageTests-Swift.h"
-    requires objc
-}
