@@ -1,6 +1,7 @@
 {
-    "run_name": "sunny-ocean-2849",
-    "timestamp": "2024-11-22T16:30:14.884162Z",
-    "status": "success",
-    "ci_dir": "ci-reports/sunny-ocean-2849"
+    "run_name": "shiny-mountain-3807",
+    "timestamp": "2024-11-22T16:37:01.717105+00:00",
+    "build_status": "success",
+    "test_status": "failure",
+    "ci_dir": "ci-reports/shiny-mountain-3807"
 }
