@@ -1,0 +1,152 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+error: emit-module command failed with exit code 1 (use -v to see invocation)
+[2/6] Emitting module OpenAPIParserLib
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:6:29: error: cannot find type 'ResponseObject' in scope
+ 4 | struct ComponentsObject: Codable {
+ 5 |     let schemas: [String: SchemaObject]?
+ 6 |     let responses: [String: ResponseObject]?
+   |                             `- error: cannot find type 'ResponseObject' in scope
+ 7 |     let parameters: [String: ParameterObject]?
+ 8 |     let examples: [String: ExampleObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:4:8: error: type 'ComponentsObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents a container for reusable objects in an OpenAPI document.
+ 4 | struct ComponentsObject: Codable {
+   |        `- error: type 'ComponentsObject' does not conform to protocol 'Decodable'
+ 5 |     let schemas: [String: SchemaObject]?
+ 6 |     let responses: [String: ResponseObject]?
+   |         `- note: cannot automatically synthesize 'Decodable' because '[String : ResponseObject]?' does not conform to 'Decodable'
+ 7 |     let parameters: [String: ParameterObject]?
+ 8 |     let examples: [String: ExampleObject]?
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:16:30: error: cannot find type 'ResponseObject' in scope
+14 | 
+15 |     init(schemas: [String: SchemaObject]? = nil,
+16 |          responses: [String: ResponseObject]? = nil,
+   |                              `- error: cannot find type 'ResponseObject' in scope
+17 |          parameters: [String: ParameterObject]? = nil,
+18 |          examples: [String: ExampleObject]? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:4:8: error: type 'ComponentsObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents a container for reusable objects in an OpenAPI document.
+ 4 | struct ComponentsObject: Codable {
+   |        `- error: type 'ComponentsObject' does not conform to protocol 'Encodable'
+ 5 |     let schemas: [String: SchemaObject]?
+ 6 |     let responses: [String: ResponseObject]?
+   |         `- note: cannot automatically synthesize 'Encodable' because '[String : ResponseObject]?' does not conform to 'Encodable'
+ 7 |     let parameters: [String: ParameterObject]?
+ 8 |     let examples: [String: ExampleObject]?
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Decodable' because 'ResponsesObject' does not conform to 'Decodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Encodable' because 'ResponsesObject' does not conform to 'Encodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:3:29: error: cannot find type 'ResponseObject' in scope
+1 | 
+2 | class ResponsesObject {
+3 |     var responses: [String: ResponseObject] = [:]
+  |                             `- error: cannot find type 'ResponseObject' in scope
+4 | 
+5 |     subscript(responseCode: String) -> ResponseObject? {
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:5:40: error: cannot find type 'ResponseObject' in scope
+3 |     var responses: [String: ResponseObject] = [:]
+4 | 
+5 |     subscript(responseCode: String) -> ResponseObject? {
+  |                                        `- error: cannot find type 'ResponseObject' in scope
+6 |         return self.responses[responseCode]
+7 |     }
+[3/6] Compiling OpenAPIParserLib ResponsesObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:3:29: error: cannot find type 'ResponseObject' in scope
+1 | 
+2 | class ResponsesObject {
+3 |     var responses: [String: ResponseObject] = [:]
+  |                             `- error: cannot find type 'ResponseObject' in scope
+4 | 
+5 |     subscript(responseCode: String) -> ResponseObject? {
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:5:40: error: cannot find type 'ResponseObject' in scope
+3 |     var responses: [String: ResponseObject] = [:]
+4 | 
+5 |     subscript(responseCode: String) -> ResponseObject? {
+  |                                        `- error: cannot find type 'ResponseObject' in scope
+6 |         return self.responses[responseCode]
+7 |     }
+[4/6] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:65:57: warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         
+65 |                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+   |                                                         `- warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+66 |                     return nil
+67 |                 }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:70:53: error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+68 |                 
+69 |                 // Assuming PathItemObject can decode from OpenAPIPathItemObject
+70 |                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+   |                                                     `- error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:73:18: warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+73 |                  as? PathItemObject
+   |                  `- warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+74 |     }
+75 | }
+error: fatalError

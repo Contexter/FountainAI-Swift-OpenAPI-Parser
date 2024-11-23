@@ -65,7 +65,11 @@ extension PathsObject {
                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
                     return nil
                 }
-                return PathItemObject(from: openAPIPathItem)
+                
+                // Assuming PathItemObject can decode from OpenAPIPathItemObject
+                guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+                return PathItemObject(from: decoder)
+                
                  as? PathItemObject
     }
 }
