@@ -19,3 +19,14 @@ struct ComponentsObject: Codable {
         try container.encodeIfPresent(content, forKey: .content)
     }
 }
+
+// Auto-generated properties
+var schemas: [String: SchemaObject]? // Added schemas property
+var responses: [String: ResponseObject]? // Added responses property
+var parameters: [String: ParameterObject]? // Added parameters property
+var examples: [String: ExampleObject]? // Added examples property
+var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+var headers: [String: HeaderObject]? // Added headers property
+var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+var links: [String: LinkObject]? // Added links property
+var callbacks: [String: CallbackObject]? // Added callbacks property
