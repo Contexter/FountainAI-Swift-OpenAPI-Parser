@@ -1,0 +1,40 @@
+warning: 'fountainai-swift-openapi-parser': found 2 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.yaml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.json
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+[3/5] Emitting module OpenAPIParserLib
+[4/5] Compiling OpenAPIParserLib ResponsesObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:36:21: error: value of type 'ResponsesObject' has no member 'responses'
+34 |     subscript(responseCode: String) -> ResponseObject? {
+35 |         // Assuming ResponsesObject contains a dictionary of responses
+36 |         return self.responses[responseCode]
+   |                     `- error: value of type 'ResponsesObject' has no member 'responses'
+37 |     }
+38 | }
+[5/5] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:65:57: warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         
+65 |                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+   |                                                         `- warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+66 |                     return nil
+67 |                 }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:68:45: error: argument type 'OpenAPIPathItemObject' does not conform to expected type 'Decoder'
+66 |                     return nil
+67 |                 }
+68 |                 return PathItemObject(from: openAPIPathItem)
+   |                                             `- error: argument type 'OpenAPIPathItemObject' does not conform to expected type 'Decoder'
+69 |                  as? PathItemObject
+70 |     }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:69:18: warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+67 |                 }
+68 |                 return PathItemObject(from: openAPIPathItem)
+69 |                  as? PathItemObject
+   |                  `- warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+70 |     }
+71 | }

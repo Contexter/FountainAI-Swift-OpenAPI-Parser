@@ -61,6 +61,11 @@ extension PathsObject {
 extension PathsObject {
     func getPath(_ path: String) -> PathItemObject? {
         // Assuming paths is a dictionary property in PathsObject
-        return paths[path] as? PathItemObject
+        
+                guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+                    return nil
+                }
+                return PathItemObject(from: openAPIPathItem)
+                 as? PathItemObject
     }
 }

@@ -29,3 +29,10 @@ struct ResponseObject: Codable {
         self.links = links
     }
 }
+
+extension ResponsesObject {
+    subscript(responseCode: String) -> ResponseObject? {
+        // Assuming ResponsesObject contains a dictionary of responses
+        return self.responses[responseCode]
+    }
+}
