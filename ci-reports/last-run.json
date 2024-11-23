@@ -1,7 +1,7 @@
 {
-    "run_name": "shiny-ocean-6094",
-    "timestamp": "2024-11-23T12:41:50.206723+00:00",
+    "run_name": "lucky-star-1101",
+    "timestamp": "2024-11-23T12:46:00.329122+00:00",
     "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/shiny-ocean-6094"
+    "ci_dir": "ci-reports/lucky-star-1101"
 }
