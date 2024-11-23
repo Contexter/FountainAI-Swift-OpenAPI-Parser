@@ -1,7 +1,7 @@
 {
-    "run_name": "shiny-mountain-3807",
-    "timestamp": "2024-11-22T16:37:01.717105+00:00",
-    "build_status": "success",
+    "run_name": "quiet-desert-6321",
+    "timestamp": "2024-11-23T10:46:42.575932+00:00",
+    "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/shiny-mountain-3807"
+    "ci_dir": "ci-reports/quiet-desert-6321"
 }

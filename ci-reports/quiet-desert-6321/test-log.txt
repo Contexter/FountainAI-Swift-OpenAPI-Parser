@@ -1,0 +1,28 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/8] Compiling OpenAPIParserLib OpenAPIParser.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:50:48: error: type 'Any' cannot conform to 'Decodable'
+48 |             }
+49 | 
+50 |             let yamlObject = try YAMLDecoder().decode([String: Any].self, from: yamlString)
+   |                                                |- error: type 'Any' cannot conform to 'Decodable'
+   |                                                |- note: only concrete types such as structs, enums and classes can conform to protocols
+   |                                                `- note: requirement from conditional conformance of '[String : Any]' to 'Decodable'
+51 |             let jsonData = try JSONSerialization.data(withJSONObject: yamlObject, options: [])
+52 |             return try JSONDecoder().decode(OpenAPIDocument.self, from: jsonData)
+[3/8] Compiling OpenAPIParserLib ValidationUtility.swift
+[4/9] Compiling OpenAPIParserLib AnyCodable.swift
+[5/9] Compiling OpenAPIParserLib ReferenceResolver.swift
+[6/17] Emitting module OpenAPIParserLib
+[7/18] Compiling OpenAPIParserLib ParameterObject.swift
+[8/19] Compiling OpenAPIParserLib RequestBodyObject.swift
+[9/19] Compiling OpenAPIParserLib MediaTypeObject.swift
+[10/19] Compiling OpenAPIParserLib ExampleObject.swift
+[11/19] Compiling OpenAPIParserLib HeaderObject.swift
+[12/19] Compiling OpenAPIParserLib OpenAPIDocument.swift
+[13/19] Compiling OpenAPIParserLib LinkObject.swift
+[14/19] Compiling OpenAPIParserLib ComponentsObject.swift
+[15/19] Compiling OpenAPIParserLib EncodingObject.swift
+[16/19] Compiling OpenAPIParserLib ResponsesObject.swift
+[17/19] Compiling OpenAPIParserLib SchemaObject.swift
+error: fatalError

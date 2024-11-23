@@ -1,4 +1,6 @@
+
 import Foundation
+import Yams
 
 /// A parser responsible for loading and parsing OpenAPI documents.
 class OpenAPIParser {
@@ -6,13 +8,13 @@ class OpenAPIParser {
         case fileNotFound
         case invalidData
         case decodingError(Error)
+        case unsupportedFormat
     }
 
     /// Parses an OpenAPI document from a JSON or YAML file located at a given URL.
     /// - Parameter url: The URL of the OpenAPI document.
     /// - Returns: A decoded `OpenAPIDocument` object.
     func parse(from url: URL) throws -> OpenAPIDocument {
-        // Load data from file
         let data: Data
         do {
             data = try Data(contentsOf: url)
@@ -20,12 +22,36 @@ class OpenAPIParser {
             throw ParserError.fileNotFound
         }
 
-        // Decode data into OpenAPIDocument
+        let fileExtension = url.pathExtension.lowercased()
+        switch fileExtension {
+        case "json":
+            return try parseJSON(from: data)
+        case "yaml", "yml":
+            return try parseYAML(from: data)
+        default:
+            throw ParserError.unsupportedFormat
+        }
+    }
+
+    private func parseJSON(from data: Data) throws -> OpenAPIDocument {
         do {
-            let document = try JSONDecoder().decode(OpenAPIDocument.self, from: data)
-            return document
+            return try JSONDecoder().decode(OpenAPIDocument.self, from: data)
         } catch {
-            throw ParserError.invalidData
+            throw ParserError.decodingError(error)
+        }
+    }
+
+    private func parseYAML(from data: Data) throws -> OpenAPIDocument {
+        do {
+            guard let yamlString = String(data: data, encoding: .utf8) else {
+                throw ParserError.invalidData
+            }
+
+            let yamlObject = try YAMLDecoder().decode([String: Any].self, from: yamlString)
+            let jsonData = try JSONSerialization.data(withJSONObject: yamlObject, options: [])
+            return try JSONDecoder().decode(OpenAPIDocument.self, from: jsonData)
+        } catch {
+            throw ParserError.decodingError(error)
         }
     }
 }
