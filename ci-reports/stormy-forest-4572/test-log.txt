@@ -1,0 +1,12 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/5] Emitting module OpenAPIParserTests
+[3/5] Compiling OpenAPIParserTests OpenAPIParserTests.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/OpenAPIParserTests.swift:37:58: error: value of type 'ResponsesObject' has no subscripts
+35 |             if let examplePath = document.paths["/example"] {
+36 |                 XCTAssertNotNil(examplePath.get)
+37 |                 XCTAssertEqual(examplePath.get?.responses["200"]?.description, "Success")
+   |                                                          `- error: value of type 'ResponsesObject' has no subscripts
+38 |             } else {
+39 |                 XCTFail("Path '/example' was not found in the parsed document")
+error: fatalError

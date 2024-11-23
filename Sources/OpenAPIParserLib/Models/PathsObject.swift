@@ -61,6 +61,6 @@ extension PathsObject {
 extension PathsObject {
     func getPath(_ path: String) -> PathItemObject? {
         // Assuming paths is a dictionary property in PathsObject
-        return paths[path]
+        return paths[path] as? PathItemObject
     }
 }
