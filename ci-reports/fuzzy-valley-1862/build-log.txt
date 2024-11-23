@@ -1,0 +1,134 @@
+Fetching https://github.com/jpsim/Yams.git from cache
+Fetched https://github.com/jpsim/Yams.git from cache (0.77s)
+Computing version for https://github.com/jpsim/Yams.git
+Computed https://github.com/jpsim/Yams.git at 4.0.6 (0.04s)
+Creating working copy for https://github.com/jpsim/Yams.git
+Working copy of https://github.com/jpsim/Yams.git resolved at 4.0.6
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI': File not found.
+warning: 'fountainai-swift-openapi-parser': found 10 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml
+Building for debugging...
+[0/9] Write sources
+[2/9] Write swift-version--58304C5D6DBC2206.txt
+[3/9] Compiling writer.c
+[4/9] Compiling reader.c
+[5/9] Compiling parser.c
+[6/9] Compiling api.c
+[7/9] Compiling scanner.c
+[8/9] Compiling emitter.c
+[10/24] Compiling Yams String+Yams.swift
+[11/24] Compiling Yams Tag.swift
+[12/25] Compiling Yams Constructor.swift
+[13/25] Compiling Yams Decoder.swift
+[14/25] Compiling Yams Representer.swift
+[15/25] Compiling Yams Resolver.swift
+[16/25] Compiling Yams Mark.swift
+[17/25] Compiling Yams Node.Mapping.swift
+[18/25] Compiling Yams Node.swift
+[19/25] Compiling Yams Parser.swift
+[20/25] Emitting module Yams
+[21/25] Compiling Yams Node.Scalar.swift
+[22/25] Compiling Yams Node.Sequence.swift
+[23/25] Compiling Yams Emitter.swift
+[24/25] Compiling Yams Encoder.swift
+[25/25] Compiling Yams YamlError.swift
+[26/56] Compiling OpenAPIParserLib ResponsesObject.swift
+[27/56] Compiling OpenAPIParserLib SchemaObject.swift
+[28/56] Compiling OpenAPIParserLib SecurityRequirementObject.swift
+[29/56] Compiling OpenAPIParserLib SecuritySchemeObject.swift
+[30/56] Compiling OpenAPIParserLib PathItemObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[31/56] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[32/56] Compiling OpenAPIParserLib RequestBodyObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[33/56] Compiling OpenAPIParserLib ResponseObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[34/60] Emitting module OpenAPIParserLib
+[35/60] Compiling OpenAPIParserLib ServerObject.swift
+[36/60] Compiling OpenAPIParserLib TagObject.swift
+[37/60] Compiling OpenAPIParserLib Validatable.swift
+[38/60] Compiling OpenAPIParserLib XMLObject.swift
+[39/60] Compiling OpenAPIParserLib OpenAPIParserError.swift
+[40/60] Compiling OpenAPIParserLib AdditionalProperties.swift
+[41/60] Compiling OpenAPIParserLib CallbackObject.swift
+[42/60] Compiling OpenAPIParserLib ComponentsObject.swift
+[43/60] Compiling OpenAPIParserLib DiscriminatorObject.swift
+[44/60] Compiling OpenAPIParserLib OAuthFlowsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[45/60] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[46/60] Compiling OpenAPIParserLib OperationObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[47/60] Compiling OpenAPIParserLib ParameterObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[48/60] Compiling OpenAPIParserLib OpenAPIParser.swift
+[49/60] Compiling OpenAPIParserLib AnyCodable.swift
+[50/60] Compiling OpenAPIParserLib ReferenceResolver.swift
+[51/60] Compiling OpenAPIParserLib ValidationUtility.swift
+[52/60] Compiling OpenAPIParserLib InfoObject.swift
+[53/60] Compiling OpenAPIParserLib LinkObject.swift
+[54/60] Compiling OpenAPIParserLib MediaTypeObject.swift
+[55/60] Compiling OpenAPIParserLib OAuthFlowObject.swift
+[56/60] Compiling OpenAPIParserLib DynamicCodingKeys.swift
+[57/60] Compiling OpenAPIParserLib EncodingObject.swift
+[58/60] Compiling OpenAPIParserLib ExampleObject.swift
+[59/60] Compiling OpenAPIParserLib ExternalDocumentationObject.swift
+[60/60] Compiling OpenAPIParserLib HeaderObject.swift
