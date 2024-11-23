@@ -32,15 +32,17 @@ var links: [String: LinkObject]? // Added links property
 var callbacks: [String: CallbackObject]? // Added callbacks property
 
 // Auto-generated properties
-var schemas: [String: SchemaObject]? // Added schemas property
-var responses: [String: ResponseObject]? // Added responses property
-var parameters: [String: ParameterObject]? // Added parameters property
-var examples: [String: ExampleObject]? // Added examples property
-var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
-var headers: [String: HeaderObject]? // Added headers property
-var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
-var links: [String: LinkObject]? // Added links property
-var callbacks: [String: CallbackObject]? // Added callbacks property
+
+// Auto-generated properties
+var schemas: [String: SchemaObject]? // Schema definitions
+var responses: [String: ResponseObject]? // Response objects
+var parameters: [String: ParameterObject]? // Parameter definitions
+var examples: [String: ExampleObject]? // Example definitions
+var requestBodies: [String: RequestBodyObject]? // Request body definitions
+var headers: [String: HeaderObject]? // Header definitions
+var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+var links: [String: LinkObject]? // Link definitions
+var callbacks: [String: CallbackObject]? // Callback objects
 
 // Auto-generated properties
 var schemas: [String: SchemaObject]? // Schema definitions
