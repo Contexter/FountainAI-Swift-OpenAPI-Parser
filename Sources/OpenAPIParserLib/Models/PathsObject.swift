@@ -70,6 +70,6 @@ extension PathsObject {
                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
                 return PathItemObject(from: decoder)
                 
-                 as? PathItemObject
+                 
     }
 }
