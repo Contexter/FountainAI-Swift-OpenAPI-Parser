@@ -1,0 +1,377 @@
+Building for debugging...
+[0/1] Write swift-version--58304C5D6DBC2206.txt
+[2/6] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:45: error: value of type 'ComponentsObject' has no member 'schemas'
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             for (key, value) in (components.schemas as? [String: SchemaObject]) ?? [:] {
+   |                                             `- error: value of type 'ComponentsObject' has no member 'schemas'
+57 |     if let schema = value as? SchemaObject {
+58 |     if let schema = value as? SchemaObject {
+[3/6] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:70:53: error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+68 |                 
+69 |                 // Assuming PathItemObject can decode from OpenAPIPathItemObject
+70 |                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+   |                                                     `- error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+error: emit-module command failed with exit code 1 (use -v to see invocation)
+[4/6] Emitting module OpenAPIParserLib
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:35:5: error: invalid redeclaration of 'schemas'
+33 | 
+34 | // Auto-generated properties
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+   |     `- error: invalid redeclaration of 'schemas'
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:36:5: error: invalid redeclaration of 'responses'
+34 | // Auto-generated properties
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+36 | var responses: [String: ResponseObject]? // Added responses property
+   |     `- error: invalid redeclaration of 'responses'
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:37:5: error: invalid redeclaration of 'parameters'
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+   |     `- error: invalid redeclaration of 'parameters'
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:38:5: error: invalid redeclaration of 'examples'
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+   |     `- error: invalid redeclaration of 'examples'
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:39:5: error: invalid redeclaration of 'requestBodies'
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+   |     `- error: invalid redeclaration of 'requestBodies'
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:40:5: error: invalid redeclaration of 'headers'
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+   |     `- error: invalid redeclaration of 'headers'
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:41:5: error: invalid redeclaration of 'securitySchemes'
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+   |     `- error: invalid redeclaration of 'securitySchemes'
+42 | var links: [String: LinkObject]? // Added links property
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:42:5: error: invalid redeclaration of 'links'
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+   |     `- error: invalid redeclaration of 'links'
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+44 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:43:5: error: invalid redeclaration of 'callbacks'
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+   |     `- error: invalid redeclaration of 'callbacks'
+44 | 
+45 | // Auto-generated properties
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:46:5: error: invalid redeclaration of 'schemas'
+44 | 
+45 | // Auto-generated properties
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+   |     `- error: invalid redeclaration of 'schemas'
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:47:5: error: invalid redeclaration of 'responses'
+45 | // Auto-generated properties
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+47 | var responses: [String: ResponseObject]? // Response objects
+   |     `- error: invalid redeclaration of 'responses'
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:48:5: error: invalid redeclaration of 'parameters'
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+   |     `- error: invalid redeclaration of 'parameters'
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:49:5: error: invalid redeclaration of 'examples'
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+   |     `- error: invalid redeclaration of 'examples'
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:50:5: error: invalid redeclaration of 'requestBodies'
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+   |     `- error: invalid redeclaration of 'requestBodies'
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:51:5: error: invalid redeclaration of 'headers'
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+   |     `- error: invalid redeclaration of 'headers'
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:52:5: error: invalid redeclaration of 'securitySchemes'
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+   |     `- error: invalid redeclaration of 'securitySchemes'
+53 | var links: [String: LinkObject]? // Link definitions
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:53:5: error: invalid redeclaration of 'links'
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+   |     `- error: invalid redeclaration of 'links'
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+55 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:54:5: error: invalid redeclaration of 'callbacks'
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+   |     `- error: invalid redeclaration of 'callbacks'
+55 | 
+[5/6] Compiling OpenAPIParserLib ReferenceResolver.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:38:109: error: type of expression is ambiguous without a type annotation
+36 |         switch componentType {
+37 |         case "schemas":
+38 |             return (components.schemas?[componentName] as? SchemaObject as? T as? SchemaObject as? T as? T) as? T
+   |                                                                                                             `- error: type of expression is ambiguous without a type annotation
+39 |         case "responses":
+40 |             return (components.responses?[componentName] as? ResponseObject as? T as? ResponseObject as? T as? T) as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:40:115: error: type of expression is ambiguous without a type annotation
+38 |             return (components.schemas?[componentName] as? SchemaObject as? T as? SchemaObject as? T as? T) as? T
+39 |         case "responses":
+40 |             return (components.responses?[componentName] as? ResponseObject as? T as? ResponseObject as? T as? T) as? T
+   |                                                                                                                   `- error: type of expression is ambiguous without a type annotation
+41 |         case "parameters":
+42 |             return (components.parameters?[componentName] as? ParameterObject as? T as? ParameterObject as? T as? T) as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:42:118: error: type of expression is ambiguous without a type annotation
+40 |             return (components.responses?[componentName] as? ResponseObject as? T as? ResponseObject as? T as? T) as? T
+41 |         case "parameters":
+42 |             return (components.parameters?[componentName] as? ParameterObject as? T as? ParameterObject as? T as? T) as? T
+   |                                                                                                                      `- error: type of expression is ambiguous without a type annotation
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:44:74: error: type of expression is ambiguous without a type annotation
+42 |             return (components.parameters?[componentName] as? ParameterObject as? T as? ParameterObject as? T as? T) as? T
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T as? T as? T as? T
+   |                                                                          `- error: type of expression is ambiguous without a type annotation
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:46:79: error: type of expression is ambiguous without a type annotation
+44 |             return components.examples?[componentName] as? T as? T as? T as? T
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T as? T as? T as? T
+   |                                                                               `- error: type of expression is ambiguous without a type annotation
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:48:73: error: type of expression is ambiguous without a type annotation
+46 |             return components.requestBodies?[componentName] as? T as? T as? T as? T
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T as? T as? T as? T
+   |                                                                         `- error: type of expression is ambiguous without a type annotation
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:50:81: error: type of expression is ambiguous without a type annotation
+48 |             return components.headers?[componentName] as? T as? T as? T as? T
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T as? T as? T as? T
+   |                                                                                 `- error: type of expression is ambiguous without a type annotation
+51 |         case "links":
+52 |             return components.links?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:52:71: error: type of expression is ambiguous without a type annotation
+50 |             return components.securitySchemes?[componentName] as? T as? T as? T as? T
+51 |         case "links":
+52 |             return components.links?[componentName] as? T as? T as? T as? T
+   |                                                                       `- error: type of expression is ambiguous without a type annotation
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T as? T as? T as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:54:75: error: type of expression is ambiguous without a type annotation
+52 |             return components.links?[componentName] as? T as? T as? T as? T
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T as? T as? T as? T
+   |                                                                           `- error: type of expression is ambiguous without a type annotation
+55 |         default:
+56 |             print("Unknown reference type: \(componentType)")
+[6/6] Compiling OpenAPIParserLib ComponentsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:35:5: error: invalid redeclaration of 'schemas'
+33 | 
+34 | // Auto-generated properties
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+   |     `- error: invalid redeclaration of 'schemas'
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:36:5: error: invalid redeclaration of 'responses'
+34 | // Auto-generated properties
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+36 | var responses: [String: ResponseObject]? // Added responses property
+   |     `- error: invalid redeclaration of 'responses'
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:37:5: error: invalid redeclaration of 'parameters'
+35 | var schemas: [String: SchemaObject]? // Added schemas property
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+   |     `- error: invalid redeclaration of 'parameters'
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:38:5: error: invalid redeclaration of 'examples'
+36 | var responses: [String: ResponseObject]? // Added responses property
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+   |     `- error: invalid redeclaration of 'examples'
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:39:5: error: invalid redeclaration of 'requestBodies'
+37 | var parameters: [String: ParameterObject]? // Added parameters property
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+   |     `- error: invalid redeclaration of 'requestBodies'
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:40:5: error: invalid redeclaration of 'headers'
+38 | var examples: [String: ExampleObject]? // Added examples property
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+   |     `- error: invalid redeclaration of 'headers'
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:41:5: error: invalid redeclaration of 'securitySchemes'
+39 | var requestBodies: [String: RequestBodyObject]? // Added requestBodies property
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+   |     `- error: invalid redeclaration of 'securitySchemes'
+42 | var links: [String: LinkObject]? // Added links property
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:42:5: error: invalid redeclaration of 'links'
+40 | var headers: [String: HeaderObject]? // Added headers property
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+   |     `- error: invalid redeclaration of 'links'
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+44 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:43:5: error: invalid redeclaration of 'callbacks'
+41 | var securitySchemes: [String: SecuritySchemeObject]? // Added securitySchemes property
+42 | var links: [String: LinkObject]? // Added links property
+43 | var callbacks: [String: CallbackObject]? // Added callbacks property
+   |     `- error: invalid redeclaration of 'callbacks'
+44 | 
+45 | // Auto-generated properties
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:46:5: error: invalid redeclaration of 'schemas'
+44 | 
+45 | // Auto-generated properties
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+   |     `- error: invalid redeclaration of 'schemas'
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:47:5: error: invalid redeclaration of 'responses'
+45 | // Auto-generated properties
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+47 | var responses: [String: ResponseObject]? // Response objects
+   |     `- error: invalid redeclaration of 'responses'
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:48:5: error: invalid redeclaration of 'parameters'
+46 | var schemas: [String: SchemaObject]? // Schema definitions
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+   |     `- error: invalid redeclaration of 'parameters'
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:49:5: error: invalid redeclaration of 'examples'
+47 | var responses: [String: ResponseObject]? // Response objects
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+   |     `- error: invalid redeclaration of 'examples'
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:50:5: error: invalid redeclaration of 'requestBodies'
+48 | var parameters: [String: ParameterObject]? // Parameter definitions
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+   |     `- error: invalid redeclaration of 'requestBodies'
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:51:5: error: invalid redeclaration of 'headers'
+49 | var examples: [String: ExampleObject]? // Example definitions
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+   |     `- error: invalid redeclaration of 'headers'
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:52:5: error: invalid redeclaration of 'securitySchemes'
+50 | var requestBodies: [String: RequestBodyObject]? // Request body definitions
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+   |     `- error: invalid redeclaration of 'securitySchemes'
+53 | var links: [String: LinkObject]? // Link definitions
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:53:5: error: invalid redeclaration of 'links'
+51 | var headers: [String: HeaderObject]? // Header definitions
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+   |     `- error: invalid redeclaration of 'links'
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+55 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ComponentsObject.swift:54:5: error: invalid redeclaration of 'callbacks'
+52 | var securitySchemes: [String: SecuritySchemeObject]? // Security schemes
+53 | var links: [String: LinkObject]? // Link definitions
+54 | var callbacks: [String: CallbackObject]? // Callback objects
+   |     `- error: invalid redeclaration of 'callbacks'
+55 | 
