@@ -35,23 +35,23 @@ class ReferenceResolver {
         // Retrieve and cast the referenced component based on the type
         switch componentType {
         case "schemas":
-            return (components.schemas?[componentName] as? SchemaObject as? T as? SchemaObject as? T as? SchemaObject as? T as? T) as? T
+            return components.schemas?[componentName] as? SchemaObject as? T
         case "responses":
-            return (components.responses?[componentName] as? ResponseObject as? T as? ResponseObject as? T as? ResponseObject as? T as? T) as? T
+            return components.responses?[componentName] as? ResponseObject as? T
         case "parameters":
-            return (components.parameters?[componentName] as? ParameterObject as? T as? ParameterObject as? T as? ParameterObject as? T as? T) as? T
+            return components.parameters?[componentName] as? ParameterObject as? T
         case "examples":
-            return components.examples?[componentName] as? T as? T as? T as? T as? T
+            return components.examples?[componentName] as? T
         case "requestBodies":
-            return components.requestBodies?[componentName] as? T as? T as? T as? T as? T
+            return components.requestBodies?[componentName] as? T
         case "headers":
-            return components.headers?[componentName] as? T as? T as? T as? T as? T
+            return components.headers?[componentName] as? T
         case "securitySchemes":
-            return components.securitySchemes?[componentName] as? T as? T as? T as? T as? T
+            return components.securitySchemes?[componentName] as? T
         case "links":
-            return components.links?[componentName] as? T as? T as? T as? T as? T
+            return components.links?[componentName] as? T
         case "callbacks":
-            return components.callbacks?[componentName] as? T as? T as? T as? T as? T
+            return components.callbacks?[componentName] as? T
         default:
             print("Unknown reference type: \(componentType)")
             return nil
