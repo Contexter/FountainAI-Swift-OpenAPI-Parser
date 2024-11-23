@@ -51,3 +51,9 @@ struct OpenAPIPathItemObject: Codable {
         self.parameters = parameters
     }
 }
+
+extension PathsObject {
+    subscript(path: String) -> PathItemObject? {
+        return self.getPath(path) // Assuming PathsObject has a getPath method
+    }
+}

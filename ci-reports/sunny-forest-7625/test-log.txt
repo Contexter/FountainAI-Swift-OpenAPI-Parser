@@ -1,0 +1,13 @@
+Building for debugging...
+[0/4] Write sources
+[1/4] Write swift-version--58304C5D6DBC2206.txt
+[3/6] Emitting module OpenAPIParserLib
+[4/6] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:57:21: error: value of type 'PathsObject' has no member 'getPath'
+55 | extension PathsObject {
+56 |     subscript(path: String) -> PathItemObject? {
+57 |         return self.getPath(path) // Assuming PathsObject has a getPath method
+   |                     `- error: value of type 'PathsObject' has no member 'getPath'
+58 |     }
+59 | }
+error: fatalError

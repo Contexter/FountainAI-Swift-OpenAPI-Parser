@@ -27,7 +27,11 @@ final class OpenAPIParserTests: XCTestCase {
             XCTAssertEqual(document.info.version, "1.0.0")
             
             // Assertions for `paths` structure
-            XCTAssertNotNil(document.paths["/example"]) // Assuming `paths` is a dictionary-like structure
+            if let examplePath = document.paths["/example"] {
+    XCTAssertNotNil(examplePath.get)
+} else {
+    XCTFail("Path '/example' not found in document.paths")
+} // Assuming `paths` is a dictionary-like structure
             if let examplePath = document.paths["/example"] {
                 XCTAssertNotNil(examplePath.get)
                 XCTAssertEqual(examplePath.get?.responses["200"]?.description, "Success")

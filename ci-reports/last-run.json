@@ -1,7 +1,7 @@
 {
-    "run_name": "fuzzy-cloud-3036",
-    "timestamp": "2024-11-23T10:54:50.065903+00:00",
-    "build_status": "success",
+    "run_name": "sunny-forest-7625",
+    "timestamp": "2024-11-23T11:01:08.466287+00:00",
+    "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/fuzzy-cloud-3036"
+    "ci_dir": "ci-reports/sunny-forest-7625"
 }

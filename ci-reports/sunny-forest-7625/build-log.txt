@@ -1,0 +1,16 @@
+warning: 'fountainai-swift-openapi-parser': found 2 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.yaml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.json
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+[3/4] Emitting module OpenAPIParserLib
+[4/4] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:57:21: error: value of type 'PathsObject' has no member 'getPath'
+55 | extension PathsObject {
+56 |     subscript(path: String) -> PathItemObject? {
+57 |         return self.getPath(path) // Assuming PathsObject has a getPath method
+   |                     `- error: value of type 'PathsObject' has no member 'getPath'
+58 |     }
+59 | }
