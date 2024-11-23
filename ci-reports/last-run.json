@@ -1,7 +1,7 @@
 {
-    "run_name": "quiet-sky-4179",
-    "timestamp": "2024-11-23T16:33:00.765668+00:00",
+    "run_name": "blue-desert-1993",
+    "timestamp": "2024-11-23T16:42:46.072188+00:00",
     "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/quiet-sky-4179"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/blue-desert-1993"
 }
