@@ -57,3 +57,10 @@ extension PathsObject {
         return self.getPath(path) // Assuming PathsObject has a getPath method
     }
 }
+
+extension PathsObject {
+    func getPath(_ path: String) -> PathItemObject? {
+        // Assuming paths is a dictionary property in PathsObject
+        return paths[path]
+    }
+}

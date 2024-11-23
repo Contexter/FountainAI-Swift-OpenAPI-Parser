@@ -1,0 +1,12 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/5] Emitting module OpenAPIParserLib
+[3/5] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:64:21: error: cannot convert return expression of type 'OpenAPIPathItemObject?' to return type 'PathItemObject?'
+62 |     func getPath(_ path: String) -> PathItemObject? {
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         return paths[path]
+   |                     `- error: cannot convert return expression of type 'OpenAPIPathItemObject?' to return type 'PathItemObject?'
+65 |     }
+66 | }
+error: fatalError
