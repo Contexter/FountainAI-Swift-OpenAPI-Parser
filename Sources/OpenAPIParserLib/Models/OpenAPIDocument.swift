@@ -57,7 +57,10 @@ struct OpenAPIDocument: Codable {
     if let schema = value as? SchemaObject {
     if let schema = value as? SchemaObject {
     if let schema = value as? SchemaObject {
+    if let schema = value as? SchemaObject {
                 if !ValidationUtility.validateSchema(schema) {
+    }
+
     }
 
     }
