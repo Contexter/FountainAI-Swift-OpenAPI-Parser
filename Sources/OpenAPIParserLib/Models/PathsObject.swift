@@ -62,7 +62,7 @@ extension PathsObject {
     func getPath(_ path: String) -> PathItemObject? {
         // Assuming paths is a dictionary property in PathsObject
         
-                guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+                guard let openAPIPathItem = paths[path] else {
                     return nil
                 }
                 

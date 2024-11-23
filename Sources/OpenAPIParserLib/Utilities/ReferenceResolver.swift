@@ -35,9 +35,9 @@ class ReferenceResolver {
         // Retrieve and cast the referenced component based on the type
         switch componentType {
         case "schemas":
-            return components.schemas?[componentName] as? SchemaObject as? T
+            return (components.schemas?[componentName] as? SchemaObject) as? T
         case "responses":
-            return components.responses?[componentName] as? ResponseObject as? T
+            return (components.responses?[componentName] as? ResponseObject) as? T
         case "parameters":
             return components.parameters?[componentName] as? ParameterObject as? T
         case "examples":
