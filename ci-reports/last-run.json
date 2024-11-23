@@ -1,7 +1,7 @@
 {
-    "run_name": "blue-valley-7926",
-    "timestamp": "2024-11-23T11:29:41.282931+00:00",
+    "run_name": "bright-desert-2202",
+    "timestamp": "2024-11-23T12:16:19.887300+00:00",
     "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/blue-valley-7926"
+    "ci_dir": "ci-reports/bright-desert-2202"
 }

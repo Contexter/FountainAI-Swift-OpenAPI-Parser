@@ -1,0 +1,469 @@
+warning: 'fountainai-swift-openapi-parser': found 2 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.json
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.yaml
+warning: 'fountainai-swift-openapi-parser': found 10 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+error: emit-module command failed with exit code 1 (use -v to see invocation)
+[3/8] Compiling OpenAPIParserLib MediaTypeObject.swift
+[4/8] Compiling OpenAPIParserLib ComponentsObject.swift
+[5/8] Compiling OpenAPIParserLib ResponseObject.swift
+[6/8] Emitting module OpenAPIParserLib
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:11:22: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |                      `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+12 |     let responses: ResponsesObject
+13 |     let deprecated: Bool?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:12:20: error: cannot find type 'ResponsesObject' in scope
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |                    `- error: cannot find type 'ResponsesObject' in scope
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |         `- note: cannot automatically synthesize 'Decodable' because 'RequestBodyObject?' does not conform to 'Decodable'
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Decodable' because 'ResponsesObject' does not conform to 'Decodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:23:23: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+21 |          operationId: String? = nil,
+22 |          parameters: [ParameterObject]? = nil,
+23 |          requestBody: RequestBodyObject? = nil,
+   |                       `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+24 |          responses: ResponsesObject,
+25 |          deprecated: Bool? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:24:21: error: cannot find type 'ResponsesObject' in scope
+22 |          parameters: [ParameterObject]? = nil,
+23 |          requestBody: RequestBodyObject? = nil,
+24 |          responses: ResponsesObject,
+   |                     `- error: cannot find type 'ResponsesObject' in scope
+25 |          deprecated: Bool? = nil,
+26 |          security: [SecurityRequirementObject]? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |         `- note: cannot automatically synthesize 'Encodable' because 'RequestBodyObject?' does not conform to 'Encodable'
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Encodable' because 'ResponsesObject' does not conform to 'Encodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: error: invalid redeclaration of 'RequestBodyObject'
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- error: invalid redeclaration of 'RequestBodyObject'
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+[7/8] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:11:22: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |                      `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+12 |     let responses: ResponsesObject
+13 |     let deprecated: Bool?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:12:20: error: cannot find type 'ResponsesObject' in scope
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |                    `- error: cannot find type 'ResponsesObject' in scope
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:65:57: warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         
+65 |                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+   |                                                         `- warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+66 |                     return nil
+67 |                 }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:70:53: error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+68 |                 
+69 |                 // Assuming PathItemObject can decode from OpenAPIPathItemObject
+70 |                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+   |                                                     `- error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:73:18: warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+73 |                  as? PathItemObject
+   |                  `- warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+74 |     }
+75 | }
+[8/8] Compiling OpenAPIParserLib ResponsesObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: error: invalid redeclaration of 'RequestBodyObject'
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- error: invalid redeclaration of 'RequestBodyObject'
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+[9/16] Compiling OpenAPIParserLib ReferenceResolver.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:38:55: error: type of expression is ambiguous without a type annotation
+36 |         switch componentType {
+37 |         case "schemas":
+38 |             return components.schemas?[componentName] as? T
+   |                                                       `- error: type of expression is ambiguous without a type annotation
+39 |         case "responses":
+40 |             return components.responses?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:40:57: error: type of expression is ambiguous without a type annotation
+38 |             return components.schemas?[componentName] as? T
+39 |         case "responses":
+40 |             return components.responses?[componentName] as? T
+   |                                                         `- error: type of expression is ambiguous without a type annotation
+41 |         case "parameters":
+42 |             return components.parameters?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:42:58: error: type of expression is ambiguous without a type annotation
+40 |             return components.responses?[componentName] as? T
+41 |         case "parameters":
+42 |             return components.parameters?[componentName] as? T
+   |                                                          `- error: type of expression is ambiguous without a type annotation
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:44:56: error: type of expression is ambiguous without a type annotation
+42 |             return components.parameters?[componentName] as? T
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T
+   |                                                        `- error: type of expression is ambiguous without a type annotation
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:46:61: error: type of expression is ambiguous without a type annotation
+44 |             return components.examples?[componentName] as? T
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T
+   |                                                             `- error: type of expression is ambiguous without a type annotation
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:48:55: error: type of expression is ambiguous without a type annotation
+46 |             return components.requestBodies?[componentName] as? T
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T
+   |                                                       `- error: type of expression is ambiguous without a type annotation
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:50:63: error: type of expression is ambiguous without a type annotation
+48 |             return components.headers?[componentName] as? T
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T
+   |                                                               `- error: type of expression is ambiguous without a type annotation
+51 |         case "links":
+52 |             return components.links?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:52:53: error: type of expression is ambiguous without a type annotation
+50 |             return components.securitySchemes?[componentName] as? T
+51 |         case "links":
+52 |             return components.links?[componentName] as? T
+   |                                                     `- error: type of expression is ambiguous without a type annotation
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:54:57: error: type of expression is ambiguous without a type annotation
+52 |             return components.links?[componentName] as? T
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T
+   |                                                         `- error: type of expression is ambiguous without a type annotation
+55 |         default:
+56 |             print("Unknown reference type: \(componentType)")
+[10/17] Compiling OpenAPIParserLib RequestBodyObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: error: invalid redeclaration of 'RequestBodyObject'
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- error: invalid redeclaration of 'RequestBodyObject'
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+[11/17] Compiling OpenAPIParserLib OperationObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:11:22: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |                      `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+12 |     let responses: ResponsesObject
+13 |     let deprecated: Bool?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:12:20: error: cannot find type 'ResponsesObject' in scope
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |                    `- error: cannot find type 'ResponsesObject' in scope
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |         `- note: cannot automatically synthesize 'Decodable' because 'RequestBodyObject?' does not conform to 'Decodable'
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Decodable' because 'ResponsesObject' does not conform to 'Decodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:23:23: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+21 |          operationId: String? = nil,
+22 |          parameters: [ParameterObject]? = nil,
+23 |          requestBody: RequestBodyObject? = nil,
+   |                       `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+24 |          responses: ResponsesObject,
+25 |          deprecated: Bool? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:24:21: error: cannot find type 'ResponsesObject' in scope
+22 |          parameters: [ParameterObject]? = nil,
+23 |          requestBody: RequestBodyObject? = nil,
+24 |          responses: ResponsesObject,
+   |                     `- error: cannot find type 'ResponsesObject' in scope
+25 |          deprecated: Bool? = nil,
+26 |          security: [SecurityRequirementObject]? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |         `- note: cannot automatically synthesize 'Encodable' because 'RequestBodyObject?' does not conform to 'Encodable'
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Encodable' because 'ResponsesObject' does not conform to 'Encodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+[12/17] Compiling OpenAPIParserLib PathItemObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:11:22: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |                      `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+12 |     let responses: ResponsesObject
+13 |     let deprecated: Bool?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:12:20: error: cannot find type 'ResponsesObject' in scope
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |                    `- error: cannot find type 'ResponsesObject' in scope
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+[13/17] Compiling OpenAPIParserLib EncodingObject.swift
+[14/17] Compiling OpenAPIParserLib HeaderObject.swift
+[15/17] Compiling OpenAPIParserLib CallbackObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:11:22: error: 'RequestBodyObject' is ambiguous for type lookup in this context
+ 9 |     let operationId: String?
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+   |                      `- error: 'RequestBodyObject' is ambiguous for type lookup in this context
+12 |     let responses: ResponsesObject
+13 |     let deprecated: Bool?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponsesObject.swift:2:8: note: found this candidate
+ 1 | 
+ 2 | struct RequestBodyObject: Codable {
+   |        `- note: found this candidate
+ 3 |     let description: String?
+ 4 |     let content: [String: MediaTypeObject]?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:12:20: error: cannot find type 'ResponsesObject' in scope
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |                    `- error: cannot find type 'ResponsesObject' in scope
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+[16/17] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:43: error: value of type 'ComponentsObject' has no member 'schemas'
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             for (_, schema) in components.schemas ?? [:] {
+   |                                           `- error: value of type 'ComponentsObject' has no member 'schemas'
+57 |                 if !ValidationUtility.validateSchema(schema) {
+58 |                     print("Validation Error: Invalid schema in components.")
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:51: error: pattern cannot match values of type '(key: AnyHashable, value: Any)'
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             for (_, schema) in components.schemas ?? [:] {
+   |                                                   `- error: pattern cannot match values of type '(key: AnyHashable, value: Any)'
+57 |                 if !ValidationUtility.validateSchema(schema) {
+58 |                     print("Validation Error: Invalid schema in components.")
+[17/17] Compiling OpenAPIParserLib OpenAPIParser.swift
