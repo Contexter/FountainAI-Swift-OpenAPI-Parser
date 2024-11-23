@@ -1,0 +1,24 @@
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+[3/7] Compiling OpenAPIParserLib ComponentsObject.swift
+[4/9] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[5/9] Emitting module OpenAPIParserLib
+[6/9] Compiling OpenAPIParserLib ReferenceResolver.swift
+[7/9] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[8/9] Compiling OpenAPIParserLib OperationObject.swift
+[9/9] Compiling OpenAPIParserLib OpenAPIParser.swift

@@ -1,0 +1,12 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/5] Emitting module OpenAPIParserLib
+[3/5] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+error: fatalError
