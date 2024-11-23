@@ -47,7 +47,7 @@ class OpenAPIParser {
                 throw ParserError.invalidData
             }
 
-            let yamlObject = try YAMLDecoder().decode([String: Any].self, from: yamlString)
+            let yamlObject = try YAMLDecoder().decode([String: AnyCodable].self, from: yamlString)
             let jsonData = try JSONSerialization.data(withJSONObject: yamlObject, options: [])
             return try JSONDecoder().decode(OpenAPIDocument.self, from: jsonData)
         } catch {

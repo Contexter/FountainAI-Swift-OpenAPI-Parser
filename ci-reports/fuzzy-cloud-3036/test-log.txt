@@ -1,0 +1,20 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/5] Emitting module OpenAPIParserTests
+[3/5] Compiling OpenAPIParserTests OpenAPIParserTests.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/OpenAPIParserTests.swift:30:43: error: value of type 'PathsObject' has no subscripts
+28 |             
+29 |             // Assertions for `paths` structure
+30 |             XCTAssertNotNil(document.paths["/example"]) // Assuming `paths` is a dictionary-like structure
+   |                                           `- error: value of type 'PathsObject' has no subscripts
+31 |             if let examplePath = document.paths["/example"] {
+32 |                 XCTAssertNotNil(examplePath.get)
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/OpenAPIParserTests.swift:31:48: error: value of type 'PathsObject' has no subscripts
+29 |             // Assertions for `paths` structure
+30 |             XCTAssertNotNil(document.paths["/example"]) // Assuming `paths` is a dictionary-like structure
+31 |             if let examplePath = document.paths["/example"] {
+   |                                                `- error: value of type 'PathsObject' has no subscripts
+32 |                 XCTAssertNotNil(examplePath.get)
+33 |                 XCTAssertEqual(examplePath.get?.responses["200"]?.description, "Success")
+error: fatalError

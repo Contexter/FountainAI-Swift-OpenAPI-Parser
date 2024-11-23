@@ -1,7 +1,7 @@
 {
-    "run_name": "quiet-desert-6321",
-    "timestamp": "2024-11-23T10:46:42.575932+00:00",
-    "build_status": "failure",
+    "run_name": "fuzzy-cloud-3036",
+    "timestamp": "2024-11-23T10:54:50.065903+00:00",
+    "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "ci-reports/quiet-desert-6321"
+    "ci_dir": "ci-reports/fuzzy-cloud-3036"
 }
