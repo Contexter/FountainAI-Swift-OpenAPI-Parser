@@ -1,0 +1,402 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/7] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:6:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+ 4 | struct RequestBodyObject: Codable {
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+   |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+ 7 |     let required: Bool?
+ 8 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: note: found this candidate
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:65:57: warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         
+65 |                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+   |                                                         `- warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+66 |                     return nil
+67 |                 }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:70:53: error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+68 |                 
+69 |                 // Assuming PathItemObject can decode from OpenAPIPathItemObject
+70 |                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+   |                                                     `- error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:73:18: warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+73 |                  as? PathItemObject
+   |                  `- warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+74 |     }
+75 | }
+[3/7] Compiling OpenAPIParserLib ResponseObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:3:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+1 | struct ResponseObject: Codable {
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:1:8: error: type 'ResponseObject' does not conform to protocol 'Decodable'
+1 | struct ResponseObject: Codable {
+  |        `- error: type 'ResponseObject' does not conform to protocol 'Decodable'
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |         `- note: cannot automatically synthesize 'Decodable' because '[String : MediaTypeObject]?' does not conform to 'Decodable'
+4 | }
+5 | 
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:1:8: error: type 'ResponseObject' does not conform to protocol 'Encodable'
+1 | struct ResponseObject: Codable {
+  |        `- error: type 'ResponseObject' does not conform to protocol 'Encodable'
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |         `- note: cannot automatically synthesize 'Encodable' because '[String : MediaTypeObject]?' does not conform to 'Encodable'
+4 | }
+5 | 
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: error: invalid redeclaration of 'MediaTypeObject'
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- error: invalid redeclaration of 'MediaTypeObject'
+7 |     let schema: SchemaObject?
+8 | }
+[4/7] Compiling OpenAPIParserLib ResponsesObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:3:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+1 | struct ResponseObject: Codable {
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+error: emit-module command failed with exit code 1 (use -v to see invocation)
+[5/7] Emitting module OpenAPIParserLib
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/HeaderObject.swift:14:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+12 |     let example: AnyCodable?
+13 |     let examples: [String: ExampleObject]?
+14 |     let content: [String: MediaTypeObject]?
+   |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+15 | 
+16 |     init(description: String? = nil,
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: note: found this candidate
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/HeaderObject.swift:4:8: error: type 'HeaderObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents an HTTP header in an OpenAPI document.
+ 4 | struct HeaderObject: Codable {
+   |        `- error: type 'HeaderObject' does not conform to protocol 'Decodable'
+ 5 |     let description: String?
+ 6 |     let required: Bool?
+   :
+12 |     let example: AnyCodable?
+13 |     let examples: [String: ExampleObject]?
+14 |     let content: [String: MediaTypeObject]?
+   |         `- note: cannot automatically synthesize 'Decodable' because '[String : MediaTypeObject]?' does not conform to 'Decodable'
+15 | 
+16 |     init(description: String? = nil,
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/HeaderObject.swift:25:28: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+23 |          example: AnyCodable? = nil,
+24 |          examples: [String: ExampleObject]? = nil,
+25 |          content: [String: MediaTypeObject]? = nil)
+   |                            `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+26 |     {
+27 |         self.description = description
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: note: found this candidate
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/HeaderObject.swift:4:8: error: type 'HeaderObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents an HTTP header in an OpenAPI document.
+ 4 | struct HeaderObject: Codable {
+   |        `- error: type 'HeaderObject' does not conform to protocol 'Encodable'
+ 5 |     let description: String?
+ 6 |     let required: Bool?
+   :
+12 |     let example: AnyCodable?
+13 |     let examples: [String: ExampleObject]?
+14 |     let content: [String: MediaTypeObject]?
+   |         `- note: cannot automatically synthesize 'Encodable' because '[String : MediaTypeObject]?' does not conform to 'Encodable'
+15 | 
+16 |     init(description: String? = nil,
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: error: invalid redeclaration of 'MediaTypeObject'
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- error: invalid redeclaration of 'MediaTypeObject'
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Decodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Decodable' because 'ResponsesObject' does not conform to 'Decodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:6:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+ 4 | struct RequestBodyObject: Codable {
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+   |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+ 7 |     let required: Bool?
+ 8 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: note: found this candidate
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OperationObject.swift:4:8: error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents a single API operation on a path, such as GET, POST, DELETE, etc.
+ 4 | struct OperationObject: Codable {
+   |        `- error: type 'OperationObject' does not conform to protocol 'Encodable'
+ 5 |     let tags: [String]?
+ 6 |     let summary: String?
+   :
+10 |     let parameters: [ParameterObject]?
+11 |     let requestBody: RequestBodyObject?
+12 |     let responses: ResponsesObject
+   |         `- note: cannot automatically synthesize 'Encodable' because 'ResponsesObject' does not conform to 'Encodable'
+13 |     let deprecated: Bool?
+14 |     let security: [SecurityRequirementObject]?
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: error: type 'RequestBodyObject' does not conform to protocol 'Decodable'
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- error: type 'RequestBodyObject' does not conform to protocol 'Decodable'
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+   |         `- note: cannot automatically synthesize 'Decodable' because '[String : MediaTypeObject]' does not conform to 'Decodable'
+ 7 |     let required: Bool?
+ 8 | 
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:10:28: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+ 8 | 
+ 9 |     init(description: String? = nil,
+10 |          content: [String: MediaTypeObject],
+   |                            `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+11 |          required: Bool? = nil)
+12 |     {
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:6:8: note: found this candidate
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/RequestBodyObject.swift:4:8: error: type 'RequestBodyObject' does not conform to protocol 'Encodable'
+ 2 | 
+ 3 | /// Represents the request body of an API operation, specifying the content type and schema.
+ 4 | struct RequestBodyObject: Codable {
+   |        `- error: type 'RequestBodyObject' does not conform to protocol 'Encodable'
+ 5 |     let description: String?
+ 6 |     let content: [String: MediaTypeObject]
+   |         `- note: cannot automatically synthesize 'Encodable' because '[String : MediaTypeObject]' does not conform to 'Encodable'
+ 7 |     let required: Bool?
+ 8 | 
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:3:27: error: 'MediaTypeObject' is ambiguous for type lookup in this context
+1 | struct ResponseObject: Codable {
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |                           `- error: 'MediaTypeObject' is ambiguous for type lookup in this context
+4 | }
+5 | 
+6 | struct MediaTypeObject: Codable {
+  |        `- note: found this candidate
+7 |     let schema: SchemaObject?
+8 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/MediaTypeObject.swift:4:8: note: found this candidate
+ 2 | 
+ 3 | /// Represents a media type for a request or response, including its schema and examples.
+ 4 | struct MediaTypeObject: Codable {
+   |        `- note: found this candidate
+ 5 |     let schema: SchemaObject?
+ 6 |     let example: AnyCodable?
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:1:8: error: type 'ResponseObject' does not conform to protocol 'Decodable'
+1 | struct ResponseObject: Codable {
+  |        `- error: type 'ResponseObject' does not conform to protocol 'Decodable'
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |         `- note: cannot automatically synthesize 'Decodable' because '[String : MediaTypeObject]?' does not conform to 'Decodable'
+4 | }
+5 | 
+
+Swift.Decodable:2:5: note: protocol requires initializer 'init(from:)' with type 'Decodable'
+1 | public protocol Decodable {
+2 |     init(from decoder: any Decoder) throws
+  |     `- note: protocol requires initializer 'init(from:)' with type 'Decodable'
+3 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/ResponseObject.swift:1:8: error: type 'ResponseObject' does not conform to protocol 'Encodable'
+1 | struct ResponseObject: Codable {
+  |        `- error: type 'ResponseObject' does not conform to protocol 'Encodable'
+2 |     let description: String?
+3 |     let content: [String: MediaTypeObject]?
+  |         `- note: cannot automatically synthesize 'Encodable' because '[String : MediaTypeObject]?' does not conform to 'Encodable'
+4 | }
+5 | 
+
+Swift.Encodable:2:10: note: protocol requires function 'encode(to:)' with type 'Encodable'
+1 | public protocol Encodable {
+2 |     func encode(to encoder: any Encoder) throws
+  |          `- note: protocol requires function 'encode(to:)' with type 'Encodable'
+3 | }
+error: fatalError
