@@ -1,7 +1,7 @@
 {
-    "run_name": "bright-desert-2202",
-    "timestamp": "2024-11-23T12:16:19.887300+00:00",
+    "run_name": "bright-desert-3683",
+    "timestamp": "2024-11-23T12:20:50.700961+00:00",
     "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/bright-desert-2202"
+    "ci_dir": "ci-reports/bright-desert-3683"
 }

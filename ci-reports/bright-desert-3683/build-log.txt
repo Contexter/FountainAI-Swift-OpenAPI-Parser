@@ -1,0 +1,139 @@
+warning: 'fountainai-swift-openapi-parser': found 2 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.yaml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/sample.json
+warning: 'fountainai-swift-openapi-parser': found 10 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+[3/10] Compiling OpenAPIParserLib RequestBodyObject.swift
+[4/10] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:65:57: warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+63 |         // Assuming paths is a dictionary property in PathsObject
+64 |         
+65 |                 guard let openAPIPathItem = paths[path] as? OpenAPIPathItemObject else {
+   |                                                         `- warning: conditional downcast from 'OpenAPIPathItemObject?' to 'OpenAPIPathItemObject' does nothing
+66 |                     return nil
+67 |                 }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:70:53: error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+68 |                 
+69 |                 // Assuming PathItemObject can decode from OpenAPIPathItemObject
+70 |                 guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+   |                                                     `- error: value of type 'OpenAPIPathItemObject' has no member 'toDecoder'
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:73:18: warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+71 |                 return PathItemObject(from: decoder)
+72 |                 
+73 |                  as? PathItemObject
+   |                  `- warning: conditional cast from 'PathItemObject' to 'PathItemObject' always succeeds
+74 |     }
+75 | }
+[5/12] Compiling OpenAPIParserLib ResponsesObject.swift
+[6/12] Emitting module OpenAPIParserLib
+[7/14] Compiling OpenAPIParserLib CallbackObject.swift
+[8/14] Compiling OpenAPIParserLib OperationObject.swift
+[9/14] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:43: error: value of type 'ComponentsObject' has no member 'schemas'
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             for (_, schema) in components.schemas ?? [:] {
+   |                                           `- error: value of type 'ComponentsObject' has no member 'schemas'
+57 |                 if !ValidationUtility.validateSchema(schema) {
+58 |                     print("Validation Error: Invalid schema in components.")
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:51: error: pattern cannot match values of type '(key: AnyHashable, value: Any)'
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             for (_, schema) in components.schemas ?? [:] {
+   |                                                   `- error: pattern cannot match values of type '(key: AnyHashable, value: Any)'
+57 |                 if !ValidationUtility.validateSchema(schema) {
+58 |                     print("Validation Error: Invalid schema in components.")
+[10/14] Compiling OpenAPIParserLib PathItemObject.swift
+[11/14] Compiling OpenAPIParserLib ReferenceResolver.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:38:55: error: type of expression is ambiguous without a type annotation
+36 |         switch componentType {
+37 |         case "schemas":
+38 |             return components.schemas?[componentName] as? T
+   |                                                       `- error: type of expression is ambiguous without a type annotation
+39 |         case "responses":
+40 |             return components.responses?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:40:57: error: type of expression is ambiguous without a type annotation
+38 |             return components.schemas?[componentName] as? T
+39 |         case "responses":
+40 |             return components.responses?[componentName] as? T
+   |                                                         `- error: type of expression is ambiguous without a type annotation
+41 |         case "parameters":
+42 |             return components.parameters?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:42:58: error: type of expression is ambiguous without a type annotation
+40 |             return components.responses?[componentName] as? T
+41 |         case "parameters":
+42 |             return components.parameters?[componentName] as? T
+   |                                                          `- error: type of expression is ambiguous without a type annotation
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:44:56: error: type of expression is ambiguous without a type annotation
+42 |             return components.parameters?[componentName] as? T
+43 |         case "examples":
+44 |             return components.examples?[componentName] as? T
+   |                                                        `- error: type of expression is ambiguous without a type annotation
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:46:61: error: type of expression is ambiguous without a type annotation
+44 |             return components.examples?[componentName] as? T
+45 |         case "requestBodies":
+46 |             return components.requestBodies?[componentName] as? T
+   |                                                             `- error: type of expression is ambiguous without a type annotation
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:48:55: error: type of expression is ambiguous without a type annotation
+46 |             return components.requestBodies?[componentName] as? T
+47 |         case "headers":
+48 |             return components.headers?[componentName] as? T
+   |                                                       `- error: type of expression is ambiguous without a type annotation
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:50:63: error: type of expression is ambiguous without a type annotation
+48 |             return components.headers?[componentName] as? T
+49 |         case "securitySchemes":
+50 |             return components.securitySchemes?[componentName] as? T
+   |                                                               `- error: type of expression is ambiguous without a type annotation
+51 |         case "links":
+52 |             return components.links?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:52:53: error: type of expression is ambiguous without a type annotation
+50 |             return components.securitySchemes?[componentName] as? T
+51 |         case "links":
+52 |             return components.links?[componentName] as? T
+   |                                                     `- error: type of expression is ambiguous without a type annotation
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Utilities/ReferenceResolver.swift:54:57: error: type of expression is ambiguous without a type annotation
+52 |             return components.links?[componentName] as? T
+53 |         case "callbacks":
+54 |             return components.callbacks?[componentName] as? T
+   |                                                         `- error: type of expression is ambiguous without a type annotation
+55 |         default:
+56 |             print("Unknown reference type: \(componentType)")
+[12/14] Compiling OpenAPIParserLib ComponentsObject.swift
+[13/14] Compiling OpenAPIParserLib ResponseObject.swift
+[14/14] Compiling OpenAPIParserLib OpenAPIParser.swift
