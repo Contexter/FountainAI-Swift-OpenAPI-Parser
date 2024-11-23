@@ -1,7 +1,7 @@
 {
-    "run_name": "stormy-rainbow-5819",
-    "timestamp": "2024-11-23T14:40:59.167436+00:00",
+    "run_name": "blue-rainbow-4008",
+    "timestamp": "2024-11-23T16:20:13.868822+00:00",
     "build_status": "failure",
     "test_status": "failure",
-    "ci_dir": "ci-reports/stormy-rainbow-5819"
+    "ci_dir": "ci-reports/blue-rainbow-4008"
 }

@@ -39,7 +39,7 @@ class ReferenceResolver {
         case "responses":
             return (components.responses?[componentName] as? ResponseObject) as? T
         case "parameters":
-            return components.parameters?[componentName] as? ParameterObject as? T
+            return (components.parameters?[componentName] as? ParameterObject) as? T
         case "examples":
             return components.examples?[componentName] as? T
         case "requestBodies":
