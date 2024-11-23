@@ -50,6 +50,13 @@ struct OpenAPIPathItemObject: Codable {
         self.servers = servers
         self.parameters = parameters
     }
+    
+    /// Converts the OpenAPIPathItemObject to a decoder for further processing.
+    func toDecoder() -> JSONDecoder? {
+        let decoder = JSONDecoder()
+        // Configure decoder as necessary
+        return decoder
+    }
 }
 
 extension PathsObject {
@@ -62,14 +69,12 @@ extension PathsObject {
     func getPath(_ path: String) -> PathItemObject? {
         // Assuming paths is a dictionary property in PathsObject
         
-                guard let openAPIPathItem = paths[path] else {
-                    return nil
-                }
-                
-                // Assuming PathItemObject can decode from OpenAPIPathItemObject
-                guard let decoder = openAPIPathItem.toDecoder() else { return nil }
-                return PathItemObject(from: decoder)
-                
-                 
+        guard let openAPIPathItem = paths[path] else {
+            return nil
+        }
+        
+        // Assuming PathItemObject can decode from OpenAPIPathItemObject
+        guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+        return PathItemObject(from: decoder)
     }
 }
