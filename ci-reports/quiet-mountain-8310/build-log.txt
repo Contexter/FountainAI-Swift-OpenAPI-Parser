@@ -1,0 +1,137 @@
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': Invalid Resource 'Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml': File not found.
+warning: 'fountainai-swift-openapi-parser': found 10 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml
+[0/1] Planning build
+Building for debugging...
+[0/7] Write swift-version--58304C5D6DBC2206.txt
+[1/7] Compiling writer.c
+[2/7] Compiling api.c
+[3/7] Compiling emitter.c
+[4/7] Compiling scanner.c
+[5/7] Compiling reader.c
+[6/7] Compiling parser.c
+[8/22] Compiling Yams Mark.swift
+[9/22] Compiling Yams Node.Mapping.swift
+[10/22] Compiling Yams String+Yams.swift
+[11/22] Compiling Yams Tag.swift
+[12/23] Emitting module Yams
+[13/23] Compiling Yams Node.swift
+[14/23] Compiling Yams Parser.swift
+[15/23] Compiling Yams Node.Scalar.swift
+[16/23] Compiling Yams Node.Sequence.swift
+[17/23] Compiling Yams Representer.swift
+[18/23] Compiling Yams Resolver.swift
+[19/23] Compiling Yams Constructor.swift
+[20/23] Compiling Yams Decoder.swift
+[21/23] Compiling Yams Emitter.swift
+[22/23] Compiling Yams Encoder.swift
+[23/23] Compiling Yams YamlError.swift
+[24/54] Compiling OpenAPIParserLib DynamicCodingKeys.swift
+[25/54] Compiling OpenAPIParserLib EncodingObject.swift
+[26/54] Compiling OpenAPIParserLib ExampleObject.swift
+[27/54] Compiling OpenAPIParserLib ExternalDocumentationObject.swift
+[28/54] Compiling OpenAPIParserLib HeaderObject.swift
+[29/54] Compiling OpenAPIParserLib ServerObject.swift
+[30/54] Compiling OpenAPIParserLib TagObject.swift
+[31/54] Compiling OpenAPIParserLib Validatable.swift
+[32/54] Compiling OpenAPIParserLib XMLObject.swift
+[33/54] Compiling OpenAPIParserLib PathItemObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[34/54] Compiling OpenAPIParserLib PathsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[35/54] Compiling OpenAPIParserLib RequestBodyObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[36/54] Compiling OpenAPIParserLib ResponseObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/PathsObject.swift:78:37: error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+76 |         // Assuming PathItemObject can decode from OpenAPIPathItemObject
+77 |         guard let decoder = openAPIPathItem.toDecoder() else { return nil }
+78 |         return PathItemObject(from: decoder)
+   |                                     `- error: argument type 'JSONDecoder' does not conform to expected type 'Decoder'
+79 |     }
+80 | }
+[37/58] Compiling OpenAPIParserLib OpenAPIParser.swift
+[38/58] Compiling OpenAPIParserLib AnyCodable.swift
+[39/58] Compiling OpenAPIParserLib ReferenceResolver.swift
+[40/58] Compiling OpenAPIParserLib ValidationUtility.swift
+[41/58] Compiling OpenAPIParserLib OAuthFlowsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[42/58] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[43/58] Compiling OpenAPIParserLib OperationObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[44/58] Compiling OpenAPIParserLib ParameterObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[45/58] Emitting module OpenAPIParserLib
+[46/58] Compiling OpenAPIParserLib OpenAPIParserError.swift
+[47/58] Compiling OpenAPIParserLib AdditionalProperties.swift
+[48/58] Compiling OpenAPIParserLib CallbackObject.swift
+[49/58] Compiling OpenAPIParserLib ComponentsObject.swift
+[50/58] Compiling OpenAPIParserLib DiscriminatorObject.swift
+[51/58] Compiling OpenAPIParserLib ResponsesObject.swift
+[52/58] Compiling OpenAPIParserLib SchemaObject.swift
+[53/58] Compiling OpenAPIParserLib SecurityRequirementObject.swift
+[54/58] Compiling OpenAPIParserLib SecuritySchemeObject.swift
+[55/58] Compiling OpenAPIParserLib InfoObject.swift
+[56/58] Compiling OpenAPIParserLib LinkObject.swift
+[57/58] Compiling OpenAPIParserLib MediaTypeObject.swift
+[58/58] Compiling OpenAPIParserLib OAuthFlowObject.swift
