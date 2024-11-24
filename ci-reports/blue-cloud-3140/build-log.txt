@@ -1,0 +1,92 @@
+[0/1] Planning build
+Building for debugging...
+[0/7] Compiling writer.c
+[1/7] Compiling reader.c
+[2/7] Compiling parser.c
+[3/7] Compiling api.c
+[4/7] Write swift-version--58304C5D6DBC2206.txt
+[5/7] Compiling emitter.c
+[6/7] Compiling scanner.c
+[8/25] Compiling FountainAI_OpenAPIs FountainAI_OpenAPIs.swift
+[9/25] Emitting module FountainAI_OpenAPIs
+[10/25] Compiling FountainAI_OpenAPIs resource_bundle_accessor.swift
+[11/25] Compiling Yams String+Yams.swift
+[12/25] Compiling Yams Tag.swift
+[13/26] Compiling Yams Representer.swift
+[14/26] Compiling Yams Resolver.swift
+[15/26] Emitting module Yams
+[16/26] Compiling Yams Node.swift
+[17/26] Compiling Yams Parser.swift
+[18/26] Compiling Yams YamlError.swift
+[19/26] Compiling Yams Node.Scalar.swift
+[20/26] Compiling Yams Node.Sequence.swift
+[21/26] Compiling Yams Mark.swift
+[22/26] Compiling Yams Node.Mapping.swift
+[23/26] Compiling Yams Emitter.swift
+[24/26] Compiling Yams Encoder.swift
+[25/26] Compiling Yams Constructor.swift
+[26/26] Compiling Yams Decoder.swift
+[27/57] Compiling OpenAPIParserLib ServerObject.swift
+[28/57] Compiling OpenAPIParserLib TagObject.swift
+[29/57] Compiling OpenAPIParserLib Validatable.swift
+[30/57] Compiling OpenAPIParserLib XMLObject.swift
+[31/61] Compiling OpenAPIParserLib InfoObject.swift
+[32/61] Compiling OpenAPIParserLib LinkObject.swift
+[33/61] Compiling OpenAPIParserLib MediaTypeObject.swift
+[34/61] Compiling OpenAPIParserLib OAuthFlowObject.swift
+[35/61] Compiling OpenAPIParserLib ResponsesObject.swift
+[36/61] Compiling OpenAPIParserLib SchemaObject.swift
+[37/61] Compiling OpenAPIParserLib SecurityRequirementObject.swift
+[38/61] Compiling OpenAPIParserLib SecuritySchemeObject.swift
+[39/61] Compiling OpenAPIParserLib DynamicCodingKeys.swift
+[40/61] Compiling OpenAPIParserLib EncodingObject.swift
+[41/61] Compiling OpenAPIParserLib ExampleObject.swift
+[42/61] Compiling OpenAPIParserLib ExternalDocumentationObject.swift
+[43/61] Compiling OpenAPIParserLib HeaderObject.swift
+[44/61] Compiling OpenAPIParserLib OAuthFlowsObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[45/61] Compiling OpenAPIParserLib OpenAPIDocument.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[46/61] Compiling OpenAPIParserLib OperationObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[47/61] Compiling OpenAPIParserLib ParameterObject.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Models/OpenAPIDocument.swift:56:49: warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+54 |         // Validate each schema within components (if components are present)
+55 |         if let components = components {
+56 |             if let schemas = components.schemas as? [String: SchemaObject] {
+   |                                                 `- warning: conditional downcast from '[String : SchemaObject]?' to '[String : SchemaObject]' does nothing
+57 |                 for (key, schema) in schemas {
+58 |                     if !ValidationUtility.validateSchema(schema) {
+[48/61] Compiling OpenAPIParserLib OpenAPIParserError.swift
+[49/61] Compiling OpenAPIParserLib AdditionalProperties.swift
+[50/61] Compiling OpenAPIParserLib CallbackObject.swift
+[51/61] Compiling OpenAPIParserLib ComponentsObject.swift
+[52/61] Compiling OpenAPIParserLib DiscriminatorObject.swift
+[53/61] Compiling OpenAPIParserLib PathItemObject.swift
+[54/61] Compiling OpenAPIParserLib PathsObject.swift
+[55/61] Compiling OpenAPIParserLib RequestBodyObject.swift
+[56/61] Compiling OpenAPIParserLib ResponseObject.swift
+[57/61] Emitting module OpenAPIParserLib
+[58/61] Compiling OpenAPIParserLib OpenAPIParser.swift
+[59/61] Compiling OpenAPIParserLib AnyCodable.swift
+[60/61] Compiling OpenAPIParserLib ReferenceResolver.swift
+[61/61] Compiling OpenAPIParserLib ValidationUtility.swift
+Build complete! (2.35s)

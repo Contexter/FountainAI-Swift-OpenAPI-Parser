@@ -1,0 +1,228 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/13] Compiling OpenAPIParserTests Test_SessionAndContextService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SessionAndContextService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SessionAndContextService.swift:48:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+46 |         do {
+47 |             let parser = OpenAPIParser()
+48 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+49 |             
+50 |             // Validate specific schema details
+[3/13] Compiling OpenAPIParserTests Test_PerformerService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_PerformerService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_PerformerService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[4/13] Compiling OpenAPIParserTests Test_EnsembleService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_EnsembleService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_EnsembleService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[5/13] Compiling OpenAPIParserTests Test_SpokenWordService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SpokenWordService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SpokenWordService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[6/14] Compiling OpenAPIParserTests Test_CharacterService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[7/14] Compiling OpenAPIParserTests Test_CoreScriptManagementService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[8/14] Emitting module OpenAPIParserTests
+[9/14] Compiling OpenAPIParserTests Test_ParaphraseService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ParaphraseService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ParaphraseService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[10/14] Compiling OpenAPIParserTests Test_ActionService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[11/14] Compiling OpenAPIParserTests Test_CentralSequenceService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+[12/14] Compiling OpenAPIParserTests Test_StoryFactoryService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_StoryFactoryService.swift:17:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_StoryFactoryService.swift:47:51: error: cannot convert value of type 'String' to expected argument type 'URL'
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                                   `- error: cannot convert value of type 'String' to expected argument type 'URL'
+48 |             
+49 |             // Validate specific schema details
+error: fatalError

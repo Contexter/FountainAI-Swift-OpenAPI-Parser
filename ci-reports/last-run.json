@@ -1,7 +1,7 @@
 {
-    "run_name": "bright-star-6687",
-    "timestamp": "2024-11-23T18:40:18.513042+00:00",
-    "build_status": "failure",
+    "run_name": "blue-cloud-3140",
+    "timestamp": "2024-11-24T01:34:17.028098+00:00",
+    "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/bright-star-6687"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/blue-cloud-3140"
 }

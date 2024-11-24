@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "FountainAI-OpenAPIs",
+        "repositoryURL": "https://github.com/contexter/FountainAI-OpenAPIs.git",
+        "state": {
+          "branch": null,
+          "revision": "2d71cf2047abffd75e6a2c342f4c5158830e9fc1",
+          "version": "1.1.0"
+        }
+      },
+      {
         "package": "Yams",
         "repositoryURL": "https://github.com/jpsim/Yams.git",
         "state": {

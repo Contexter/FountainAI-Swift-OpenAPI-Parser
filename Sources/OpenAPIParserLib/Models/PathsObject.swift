@@ -50,31 +50,27 @@ struct OpenAPIPathItemObject: Codable {
         self.servers = servers
         self.parameters = parameters
     }
-    
-    /// Converts the OpenAPIPathItemObject to a decoder for further processing.
-    func toDecoder() -> JSONDecoder? {
-        let decoder = JSONDecoder()
-        // Configure decoder as necessary
-        return decoder
-    }
 }
 
 extension PathsObject {
     subscript(path: String) -> PathItemObject? {
-        return self.getPath(path) // Assuming PathsObject has a getPath method
+        return self.getPath(path)
     }
 }
 
 extension PathsObject {
     func getPath(_ path: String) -> PathItemObject? {
-        // Assuming paths is a dictionary property in PathsObject
-        
         guard let openAPIPathItem = paths[path] else {
             return nil
         }
         
-        // Assuming PathItemObject can decode from OpenAPIPathItemObject
-        guard let decoder = openAPIPathItem.toDecoder() else { return nil }
-        return PathItemObject(from: decoder)
+        // Encode the OpenAPIPathItemObject into JSON data and decode it into a PathItemObject
+        do {
+            let jsonData = try JSONEncoder().encode(openAPIPathItem)
+            return try JSONDecoder().decode(PathItemObject.self, from: jsonData)
+        } catch {
+            print("Decoding error: \(error.localizedDescription)")
+            return nil
+        }
     }
 }
