@@ -53,15 +53,13 @@ struct OpenAPIDocument: Codable {
 
         // Validate each schema within components (if components are present)
         if let components = components {
-            if let schemas = components.schemas as? [String: SchemaObject] {
+            if let schemas = components.schemas {
                 for (key, schema) in schemas {
                     if !ValidationUtility.validateSchema(schema) {
                         print("Validation Error: Invalid schema for key '\(key)' in components.")
                         isValid = false
                     }
                 }
-            } else {
-                print("Warning: Components.schemas could not be cast to [String: SchemaObject]. Validation skipped for schemas.")
             }
             // Additional validations for responses, parameters, etc., can be added here.
         }

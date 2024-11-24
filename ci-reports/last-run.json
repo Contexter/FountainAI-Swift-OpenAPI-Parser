@@ -1,7 +1,7 @@
 {
-    "run_name": "blue-cloud-3140",
-    "timestamp": "2024-11-24T01:34:17.028098+00:00",
+    "run_name": "lucky-cloud-2380",
+    "timestamp": "2024-11-24T01:37:10.272612+00:00",
     "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/blue-cloud-3140"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/lucky-cloud-2380"
 }
