@@ -1,7 +1,7 @@
 {
-    "run_name": "fast-desert-7970",
-    "timestamp": "2024-11-24T03:32:49.216595+00:00",
+    "run_name": "stormy-cloud-5472",
+    "timestamp": "2024-11-24T07:29:01.947871+00:00",
     "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/fast-desert-7970"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/stormy-cloud-5472"
 }
