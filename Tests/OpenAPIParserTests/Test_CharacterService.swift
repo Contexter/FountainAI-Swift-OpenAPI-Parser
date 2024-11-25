@@ -2,62 +2,66 @@ import XCTest
 @testable import OpenAPIParserLib
 
 final class Test_CharacterService: XCTestCase {
+    var parser: OpenAPIParser!
+    var document: OpenAPIDocument!
 
-    func testParseCharacterSpec() {
-        // Load the OpenAPI specification file
-        let filePath = "Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml"
-        guard let specData = try? String(contentsOfFile: filePath, encoding: .utf8) else {
-            XCTFail("Failed to load Character-Service.yml")
+    /// Set up the parser and load the Character-Service YAML.
+    override func setUpWithError() throws {
+        parser = OpenAPIParser()
+        
+        // Load YAML string from the container.
+        let yamlString = OpenAPIYAMLContainer.character_service_yml
+        
+        // Convert YAML string to Data.
+        guard let yamlData = yamlString.data(using: .utf8) else {
+            XCTFail("Failed to convert YAML string to Data.")
             return
         }
         
-        // Parse the file
-        do {
-            let parser = OpenAPIParser()
-            let document = try parser.parse(from: specData)
-            
-            // Assert the document structure
-            XCTAssertNotNil(document.info, "Info object is missing.")
-            XCTAssertEqual(document.info.title, "Character Service", "Title mismatch.")
-            XCTAssertEqual(document.info.version, "1.0.0", "Version mismatch.")
-            
-            // Validate paths
-            XCTAssertNotNil(document.paths, "Paths object is missing.")
-            XCTAssertTrue(document.paths.contains("/characters"), "Missing '/characters' endpoint.")
-            
-            // Validate schemas
-            XCTAssertNotNil(document.components?.schemas, "Schemas object is missing.")
-            XCTAssertTrue(document.components?.schemas.keys.contains("CharacterObject") ?? false, "Missing 'CharacterObject' schema.")
-            
-        } catch {
-            XCTFail("Parsing failed with error: \(error)")
-        }
+        // Parse the document into OpenAPIDocument.
+        document = try parser.parseDocument(from: yamlData, format: "yaml")
     }
 
-    func testCharacterSchema() {
-        // Load and parse the spec
-        let filePath = "Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml"
-        guard let specData = try? String(contentsOfFile: filePath, encoding: .utf8) else {
-            XCTFail("Failed to load Character-Service.yml")
+    func testValidateCharacterSpec() throws {
+        // Validate the 'info' object.
+        let info = document.info
+        XCTAssertEqual(info.title, "Character Service", "Title mismatch.")
+        XCTAssertEqual(info.version, "1.0.0", "Version mismatch.")
+
+        // Validate the 'paths' object.
+        XCTAssertNotNil(document.paths["/characters"], "Missing '/characters' endpoint.")
+
+        // Validate the 'components' and 'schemas' objects.
+        guard let schemas = document.components?.schemas else {
+            XCTFail("Schemas object is missing.")
             return
         }
-        
-        do {
-            let parser = OpenAPIParser()
-            let document = try parser.parse(from: specData)
-            
-            // Validate specific schema details
-            guard let schema = document.components?.schemas["CharacterObject"] else {
-                XCTFail("CharacterObject schema is missing.")
-                return
-            }
-            
-            XCTAssertEqual(schema.type, "object", "CharacterObject schema should be of type 'object'.")
-            XCTAssertTrue(schema.properties?.keys.contains("id") ?? false, "CharacterObject schema is missing 'id' property.")
-            XCTAssertTrue(schema.properties?.keys.contains("name") ?? false, "CharacterObject schema is missing 'name' property.")
-            XCTAssertTrue(schema.properties?.keys.contains("description") ?? false, "CharacterObject schema is missing 'description' property.")
-        } catch {
-            XCTFail("Parsing failed with error: \(error)")
+        XCTAssertTrue(schemas.keys.contains("CharacterObject"), "Missing 'CharacterObject' schema.")
+    }
+
+    func testValidateCharacterSchema() throws {
+        // Validate specific schema details for 'CharacterObject'.
+        guard let schemas = document.components?.schemas,
+              let schema = schemas["CharacterObject"] else {
+            XCTFail("CharacterObject schema is missing.")
+            return
         }
+
+        // Validate schema type safely using SchemaType's underlying representation.
+        if let schemaType = schema.type?.rawValue {
+            XCTAssertEqual(schemaType, "object", "CharacterObject schema should be of type 'object'.")
+        } else {
+            XCTFail("CharacterObject type is missing or not valid.")
+        }
+
+        // Validate schema properties.
+        guard let properties = schema.properties else {
+            XCTFail("CharacterObject schema properties are missing.")
+            return
+        }
+
+        XCTAssertTrue(properties.keys.contains("id"), "CharacterObject schema is missing 'id' property.")
+        XCTAssertTrue(properties.keys.contains("name"), "CharacterObject schema is missing 'name' property.")
+        XCTAssertTrue(properties.keys.contains("description"), "CharacterObject schema is missing 'description' property.")
     }
 }
