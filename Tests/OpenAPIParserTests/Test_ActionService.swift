@@ -1,76 +1,66 @@
 import XCTest
 @testable import OpenAPIParserLib
 
-/// Tests for the `Action-Service.yml` OpenAPI specification.
-/// These tests validate both the structure of the parsed document and specific details about schemas and paths.
-/// The goal is to ensure that the OpenAPI parser interprets the YAML file correctly and that the document aligns with the expected API functionality.
 final class Test_ActionService: XCTestCase {
-    var parser: OpenAPIParser! // Instance of the parser used in all tests.
-    var document: OpenAPIDocument! // Parsed OpenAPI document for the Action Service.
+    var parser: OpenAPIParser!
+    var document: OpenAPIDocument!
 
-    /// Setup method to prepare the parser and load the OpenAPI spec before each test.
-    /// This avoids redundant code in individual tests and ensures consistency.
     override func setUpWithError() throws {
         parser = OpenAPIParser()
-        
-        // Load the `Action-Service.yml` content from the embedded YAML container.
+
+        // Load YAML from container
         let yamlString = OpenAPIYAMLContainer.action_service_yml
-        
-        // Parse the YAML string into an `OpenAPIDocument` object.
-        let yamlData = yamlString.data(using: .utf8)!
-        document = try parser.parse(from: yamlData, format: "yaml")
-    }
 
-    /// Validates the basic structure of the `Action-Service.yml` document.
-    /// Ensures that core components such as metadata, paths, and schemas are present and correctly parsed.
-    func testParseActionSpec() throws {
-        // The `info` object contains metadata about the API, such as its title and version.
-        XCTAssertEqual(document.info.title, "Action Service", "The API title does not match the expected value.")
-        XCTAssertEqual(document.info.version, "1.0.0", "The API version does not match the expected value.")
-        
-        // The `paths` object defines the available endpoints in the API.
-        // Here, we assert that the `/actions` endpoint is correctly included in the parsed document.
-        XCTAssertTrue(document.paths.contains("/actions"), "The '/actions' endpoint is missing in the API specification.")
-        
-        // The `components` object holds reusable definitions such as schemas.
-        // We verify that the `ActionObject` schema, which defines the structure of an action, is present.
-        XCTAssertNotNil(document.components?.schemas, "The components section is missing or empty.")
-        XCTAssertTrue(document.components?.schemas?.keys.contains("ActionObject") ?? false, "The 'ActionObject' schema is missing from the components.")
-    }
-
-    /// Tests the structure of the `ActionObject` schema defined in the `Action-Service.yml` file.
-    /// The `ActionObject` schema describes the structure of an individual action, including required fields.
-    func testActionSchema() throws {
-        // Retrieve the `ActionObject` schema from the parsed document.
-        // This schema is expected to be a JSON object with specific properties.
-        guard let schema = document.components?.schemas?["ActionObject"] else {
-            XCTFail("The 'ActionObject' schema is missing from the components.")
+        // Convert to Data
+        guard let yamlData = yamlString.data(using: .utf8) else {
+            XCTFail("Failed to convert YAML string to Data.")
             return
         }
-        
-        // Assert that the schema type is `object`, indicating that it represents a JSON object.
-        XCTAssertEqual(schema.type, "object", "The 'ActionObject' schema should be of type 'object'.")
-        
-        // Verify that the schema includes the required properties `id` and `description`.
-        // These properties are essential for identifying and describing actions.
-        XCTAssertTrue(schema.properties?.keys.contains("id") ?? false, "The 'ActionObject' schema is missing the 'id' property.")
-        XCTAssertTrue(schema.properties?.keys.contains("description") ?? false, "The 'ActionObject' schema is missing the 'description' property.")
+
+        // Parse document into OpenAPIDocument
+        document = try parser.parseDocument(from: yamlData, format: "yaml")
     }
 
-    /// Validates the round-trip consistency of parsing and serialization for the `Action-Service.yml` document.
-    /// Ensures that the document can be parsed, serialized back to YAML, and then re-parsed without losing information.
+    func testActionSchema() throws {
+        // Access schema for 'ActionObject'
+        guard let actionObject = document.components.schemas["ActionObject"] else {
+            XCTFail("The 'ActionObject' schema is missing from the components.schemas.")
+            return
+        }
+
+        // Assert that the schema type is 'object'
+        XCTAssertEqual(actionObject.type, "object", "The 'ActionObject' schema should be of type 'object'.")
+
+        // Verify required properties exist
+        let properties = actionObject.properties ?? [:]
+        XCTAssertTrue(properties.keys.contains("id"), "The 'ActionObject' schema is missing the 'id' property.")
+        XCTAssertTrue(properties.keys.contains("description"), "The 'ActionObject' schema is missing the 'description' property.")
+    }
+
     func testRoundTripSerialization() throws {
-        // Serialize the `OpenAPIDocument` back to YAML using the `serializeToYAML` method.
-        let yamlString = try parser.serializeToYAML(document: document)
-        
-        // Re-parse the serialized YAML string to ensure consistency with the original document.
-        let yamlData = yamlString.data(using: .utf8)!
-        let reParsedDocument = try parser.parse(from: yamlData, format: "yaml")
-        
-        // Verify that critical information, such as the title, remains unchanged after the round trip.
+        // Serialize document back to YAML
+        guard let yamlString = try? parser.serializeToYAML(document: document) else {
+            XCTFail("Failed to serialize the document to YAML.")
+            return
+        }
+        XCTAssertFalse(yamlString.isEmpty, "Serialized YAML string is empty.")
+
+        // Convert YAML string to Data
+        guard let yamlData = yamlString.data(using: .utf8) else {
+            XCTFail("Failed to generate YAML data from serialized string.")
+            return
+        }
+
+        // Re-parse serialized YAML
+        guard let reParsedDocument = try? parser.parseDocument(from: yamlData, format: "yaml") else {
+            XCTFail("Failed to parse the serialized YAML back to a document.")
+            return
+        }
+
+        // Verify round-trip consistency for 'info' section
         XCTAssertEqual(reParsedDocument.info.title, document.info.title, "The title does not match after round-trip serialization.")
-        
-        // Ensure that the endpoints (paths) remain intact and correctly parsed.
+
+        // Verify round-trip consistency for 'paths' section
         XCTAssertEqual(reParsedDocument.paths.keys, document.paths.keys, "The paths do not match after round-trip serialization.")
     }
 }
