@@ -2,62 +2,61 @@ import XCTest
 @testable import OpenAPIParserLib
 
 final class Test_CoreScriptManagementService: XCTestCase {
+    var parser: OpenAPIParser!
+    var document: OpenAPIDocument!
 
-    func testParseScriptSpec() {
-        // Load the OpenAPI specification file
-        let filePath = "Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml"
-        guard let specData = try? String(contentsOfFile: filePath, encoding: .utf8) else {
-            XCTFail("Failed to load Core-Script-Managment-Service.yml")
+    override func setUpWithError() throws {
+        parser = OpenAPIParser()
+
+        // Dynamically search for YAML matching "Core Script Management"
+        let yamlFilesMirror = Mirror(reflecting: OpenAPIMYAMLContainer.self)
+        let coreScriptYAML = yamlFilesMirror.children.first { (label, value) -> Bool in
+            label?.contains("core_script") == true && (value as? String)?.contains("Core Script Management") == true
+        }?.value as? String
+
+        guard let yamlString = coreScriptYAML else {
+            XCTFail("Core Script Management YAML not found in OpenAPIMYAMLContainer.")
             return
         }
-        
-        // Parse the file
-        do {
-            let parser = OpenAPIParser()
-            let document = try parser.parse(from: specData)
-            
-            // Assert the document structure
-            XCTAssertNotNil(document.info, "Info object is missing.")
-            XCTAssertEqual(document.info.title, "Core Script Management Service", "Title mismatch.")
-            XCTAssertEqual(document.info.version, "1.0.0", "Version mismatch.")
-            
-            // Validate paths
-            XCTAssertNotNil(document.paths, "Paths object is missing.")
-            XCTAssertTrue(document.paths.contains("/scripts"), "Missing '/scripts' endpoint.")
-            
-            // Validate schemas
-            XCTAssertNotNil(document.components?.schemas, "Schemas object is missing.")
-            XCTAssertTrue(document.components?.schemas.keys.contains("ScriptObject") ?? false, "Missing 'ScriptObject' schema.")
-            
-        } catch {
-            XCTFail("Parsing failed with error: \(error)")
+
+        // Convert YAML string to Data
+        guard let yamlData = yamlString.data(using: .utf8) else {
+            XCTFail("Failed to convert YAML string to Data.")
+            return
         }
+
+        // Parse YAML string into OpenAPIDocument
+        document = try parser.parseDocument(from: yamlData, format: "yaml")
     }
 
-    func testScriptSchema() {
-        // Load and parse the spec
-        let filePath = "Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml"
-        guard let specData = try? String(contentsOfFile: filePath, encoding: .utf8) else {
-            XCTFail("Failed to load Core-Script-Managment-Service.yml")
+    func testValidateScriptSpec() throws {
+        // Validate the 'info' object
+        let info = document.info
+        XCTAssertEqual(info.title, "Core Script Management API", "Title mismatch.")
+        XCTAssertEqual(info.version, "4.0.0", "Version mismatch.")
+
+        // Validate the '/scripts' path
+        XCTAssertNotNil(document.paths["/scripts"], "Missing '/scripts' endpoint.")
+    }
+
+    func testValidateSchemas() throws {
+        // Validate that 'Script' schema exists
+        guard let schemas = document.components?.schemas else {
+            XCTFail("Schemas object is missing.")
             return
         }
-        
-        do {
-            let parser = OpenAPIParser()
-            let document = try parser.parse(from: specData)
-            
-            // Validate specific schema details
-            guard let schema = document.components?.schemas["ScriptObject"] else {
-                XCTFail("ScriptObject schema is missing.")
-                return
-            }
-            
-            XCTAssertEqual(schema.type, "object", "ScriptObject schema should be of type 'object'.")
-            XCTAssertTrue(schema.properties?.keys.contains("id") ?? false, "ScriptObject schema is missing 'id' property.")
-            XCTAssertTrue(schema.properties?.keys.contains("title") ?? false, "ScriptObject schema is missing 'title' property.")
-            XCTAssertTrue(schema.properties?.keys.contains("content") ?? false, "ScriptObject schema is missing 'content' property.")
-        } catch {
-            XCTFail("Parsing failed with error: \(error)")
+
+        XCTAssertTrue(schemas.keys.contains("Script"), "Missing 'Script' schema.")
+
+        // Validate 'Script' schema details
+        guard let scriptSchema = schemas["Script"] else {
+            XCTFail("Script schema is missing.")
+            return
         }
+
+        XCTAssertEqual(scriptSchema.type, "object", "Script schema should be of type 'object'.")
+        XCTAssertNotNil(scriptSchema.properties?["title"], "Missing 'title' property in 'Script' schema.")
+        XCTAssertNotNil(scriptSchema.properties?["author"], "Missing 'author' property in 'Script' schema.")
+        XCTAssertNotNil(scriptSchema.properties?["sections"], "Missing 'sections' property in 'Script' schema.")
     }
 }
