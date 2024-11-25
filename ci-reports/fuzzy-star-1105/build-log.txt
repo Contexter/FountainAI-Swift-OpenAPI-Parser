@@ -1,0 +1,68 @@
+Fetching https://github.com/jpsim/Yams.git from cache
+Fetched https://github.com/jpsim/Yams.git from cache (0.63s)
+Computing version for https://github.com/jpsim/Yams.git
+Computed https://github.com/jpsim/Yams.git at 4.0.6 (1.00s)
+Creating working copy for https://github.com/jpsim/Yams.git
+Working copy of https://github.com/jpsim/Yams.git resolved at 4.0.6
+Building for debugging...
+[0/9] Write sources
+[2/9] Write swift-version--58304C5D6DBC2206.txt
+[3/9] Compiling writer.c
+[4/9] Compiling api.c
+[5/9] Compiling reader.c
+[6/9] Compiling emitter.c
+[7/9] Compiling scanner.c
+[8/9] Compiling parser.c
+[10/24] Emitting module Yams
+[11/24] Compiling Yams String+Yams.swift
+[12/24] Compiling Yams Tag.swift
+[13/24] Compiling Yams Node.Scalar.swift
+[14/24] Compiling Yams Node.Sequence.swift
+[15/24] Compiling Yams Representer.swift
+[16/24] Compiling Yams Resolver.swift
+[17/24] Compiling Yams Node.swift
+[18/24] Compiling Yams Parser.swift
+[19/24] Compiling Yams Mark.swift
+[20/24] Compiling Yams Node.Mapping.swift
+[21/24] Compiling Yams Constructor.swift
+[22/24] Compiling Yams Decoder.swift
+[23/24] Compiling Yams Emitter.swift
+[24/24] Compiling Yams Encoder.swift
+[25/25] Compiling Yams YamlError.swift
+[26/57] Compiling OpenAPIParserLib OpenAPIDocument.swift
+[27/57] Compiling OpenAPIParserLib OperationObject.swift
+[28/57] Compiling OpenAPIParserLib ParameterObject.swift
+[29/57] Compiling OpenAPIParserLib PathItemObject.swift
+[30/57] Compiling OpenAPIParserLib InfoObject.swift
+[31/57] Compiling OpenAPIParserLib LinkObject.swift
+[32/57] Compiling OpenAPIParserLib MediaTypeObject.swift
+[33/57] Compiling OpenAPIParserLib OAuthFlowObject.swift
+[34/57] Compiling OpenAPIParserLib OAuthFlowsObject.swift
+[35/61] Compiling OpenAPIParserLib OpenAPIParserError.swift
+[36/61] Compiling OpenAPIParserLib AdditionalProperties.swift
+[37/61] Compiling OpenAPIParserLib CallbackObject.swift
+[38/61] Compiling OpenAPIParserLib ComponentsObject.swift
+[39/61] Compiling OpenAPIParserLib DiscriminatorObject.swift
+[40/61] Compiling OpenAPIParserLib SchemaObject.swift
+[41/61] Compiling OpenAPIParserLib SecurityRequirementObject.swift
+[42/61] Compiling OpenAPIParserLib SecuritySchemeObject.swift
+[43/61] Compiling OpenAPIParserLib ServerObject.swift
+[44/61] Compiling OpenAPIParserLib OpenAPIParser.swift
+[45/61] Compiling OpenAPIParserLib AnyCodable.swift
+[46/61] Compiling OpenAPIParserLib ReferenceResolver.swift
+[47/61] Compiling OpenAPIParserLib ValidationUtility.swift
+[48/61] Emitting module OpenAPIParserLib
+[49/61] Compiling OpenAPIParserLib TagObject.swift
+[50/61] Compiling OpenAPIParserLib Validatable.swift
+[51/61] Compiling OpenAPIParserLib XMLObject.swift
+[52/61] Compiling OpenAPIParserLib OpenAPIYAMLContainer.swift
+[53/61] Compiling OpenAPIParserLib PathsObject.swift
+[54/61] Compiling OpenAPIParserLib RequestBodyObject.swift
+[55/61] Compiling OpenAPIParserLib ResponseObject.swift
+[56/61] Compiling OpenAPIParserLib ResponsesObject.swift
+[57/61] Compiling OpenAPIParserLib DynamicCodingKeys.swift
+[58/61] Compiling OpenAPIParserLib EncodingObject.swift
+[59/61] Compiling OpenAPIParserLib ExampleObject.swift
+[60/61] Compiling OpenAPIParserLib ExternalDocumentationObject.swift
+[61/61] Compiling OpenAPIParserLib HeaderObject.swift
+Build complete! (8.17s)
