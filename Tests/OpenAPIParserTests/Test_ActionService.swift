@@ -13,14 +13,12 @@ final class Test_ActionService: XCTestCase {
     override func setUpWithError() throws {
         parser = OpenAPIParser()
         
-        // Locate and load the `Action-Service.yml` file from the resources directory.
-        // The file defines the API contract for the Action Service, including endpoints, schemas, and metadata.
-        let fileURL = Bundle.module.url(forResource: "Action-Service", withExtension: "yml")!
-        let specData = try String(contentsOf: fileURL, encoding: .utf8)
+        // Load the `Action-Service.yml` content from the embedded YAML container.
+        let yamlString = OpenAPIYAMLContainer.action_service_yml
         
-        // Parse the YAML file into an `OpenAPIDocument` object.
-        // This object represents the structure and content of the OpenAPI specification.
-        document = try parser.parse(from: specData, format: <#String#>)
+        // Parse the YAML string into an `OpenAPIDocument` object.
+        let yamlData = yamlString.data(using: .utf8)!
+        document = try parser.parse(from: yamlData, format: "yaml")
     }
 
     /// Validates the basic structure of the `Action-Service.yml` document.
@@ -66,7 +64,8 @@ final class Test_ActionService: XCTestCase {
         let yamlString = try parser.serializeToYAML(document: document)
         
         // Re-parse the serialized YAML string to ensure consistency with the original document.
-        let reParsedDocument = try parser.parse(from: <#Data#>, format: yamlString)
+        let yamlData = yamlString.data(using: .utf8)!
+        let reParsedDocument = try parser.parse(from: yamlData, format: "yaml")
         
         // Verify that critical information, such as the title, remains unchanged after the round trip.
         XCTAssertEqual(reParsedDocument.info.title, document.info.title, "The title does not match after round-trip serialization.")
