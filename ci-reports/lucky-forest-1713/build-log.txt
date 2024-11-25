@@ -1,0 +1,74 @@
+warning: 'fountainai-swift-openapi-parser': found 10 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Character-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Ensemble-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Session-And-Context-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Performer-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Paraphrase-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Story-Factory-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Spoken-Word-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Action-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Central-Sequence-Service.yml
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/OpenAPI/Core-Script-Managment-Service.yml
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/8] Compiling reader.c
+[2/8] Compiling writer.c
+[3/8] Compiling parser.c
+[4/8] Compiling api.c
+[5/8] Write swift-version--58304C5D6DBC2206.txt
+[6/8] Compiling emitter.c
+[7/8] Compiling scanner.c
+[9/23] Compiling Yams String+Yams.swift
+[10/23] Compiling Yams Tag.swift
+[11/24] Compiling Yams Representer.swift
+[12/24] Compiling Yams Resolver.swift
+[13/24] Compiling Yams Node.Scalar.swift
+[14/24] Compiling Yams Node.Sequence.swift
+[15/24] Compiling Yams Emitter.swift
+[16/24] Compiling Yams Encoder.swift
+[17/24] Compiling Yams Mark.swift
+[18/24] Compiling Yams Node.Mapping.swift
+[19/24] Compiling Yams Constructor.swift
+[20/24] Compiling Yams Decoder.swift
+[21/24] Compiling Yams Node.swift
+[22/24] Compiling Yams Parser.swift
+[23/24] Emitting module Yams
+[24/24] Compiling Yams YamlError.swift
+[25/56] Compiling OpenAPIParserLib PathsObject.swift
+[26/56] Compiling OpenAPIParserLib RequestBodyObject.swift
+[27/56] Compiling OpenAPIParserLib ResponseObject.swift
+[28/56] Compiling OpenAPIParserLib ResponsesObject.swift
+[29/56] Compiling OpenAPIParserLib TagObject.swift
+[30/56] Compiling OpenAPIParserLib Validatable.swift
+[31/56] Compiling OpenAPIParserLib XMLObject.swift
+[32/56] Compiling OpenAPIParserLib OpenAPIYAMLContainer.swift
+[33/56] Compiling OpenAPIParserLib SchemaObject.swift
+[34/56] Compiling OpenAPIParserLib SecurityRequirementObject.swift
+[35/56] Compiling OpenAPIParserLib SecuritySchemeObject.swift
+[36/56] Compiling OpenAPIParserLib ServerObject.swift
+[37/56] Emitting module OpenAPIParserLib
+[38/60] Compiling OpenAPIParserLib InfoObject.swift
+[39/60] Compiling OpenAPIParserLib LinkObject.swift
+[40/60] Compiling OpenAPIParserLib MediaTypeObject.swift
+[41/60] Compiling OpenAPIParserLib OAuthFlowObject.swift
+[42/60] Compiling OpenAPIParserLib OAuthFlowsObject.swift
+[43/60] Compiling OpenAPIParserLib DynamicCodingKeys.swift
+[44/60] Compiling OpenAPIParserLib EncodingObject.swift
+[45/60] Compiling OpenAPIParserLib ExampleObject.swift
+[46/60] Compiling OpenAPIParserLib ExternalDocumentationObject.swift
+[47/60] Compiling OpenAPIParserLib HeaderObject.swift
+[48/60] Compiling OpenAPIParserLib OpenAPIParserError.swift
+[49/60] Compiling OpenAPIParserLib AdditionalProperties.swift
+[50/60] Compiling OpenAPIParserLib CallbackObject.swift
+[51/60] Compiling OpenAPIParserLib ComponentsObject.swift
+[52/60] Compiling OpenAPIParserLib DiscriminatorObject.swift
+[53/60] Compiling OpenAPIParserLib OpenAPIDocument.swift
+[54/60] Compiling OpenAPIParserLib OperationObject.swift
+[55/60] Compiling OpenAPIParserLib ParameterObject.swift
+[56/60] Compiling OpenAPIParserLib PathItemObject.swift
+[57/60] Compiling OpenAPIParserLib OpenAPIParser.swift
+[58/60] Compiling OpenAPIParserLib AnyCodable.swift
+[59/60] Compiling OpenAPIParserLib ReferenceResolver.swift
+[60/60] Compiling OpenAPIParserLib ValidationUtility.swift
+Build complete! (2.27s)

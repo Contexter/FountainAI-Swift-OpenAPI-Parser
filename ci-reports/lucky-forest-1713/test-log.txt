@@ -1,0 +1,485 @@
+Building for debugging...
+[0/4] Write sources
+[1/4] Write swift-version--58304C5D6DBC2206.txt
+[3/14] Emitting module OpenAPIParserTests
+[4/14] Compiling OpenAPIParserTests Test_EnsembleService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_EnsembleService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_EnsembleService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[5/14] Compiling OpenAPIParserTests Test_ParaphraseService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ParaphraseService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ParaphraseService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[6/14] Compiling OpenAPIParserTests Test_SpokenWordService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SpokenWordService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SpokenWordService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[7/14] Compiling OpenAPIParserTests Test_PerformerService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_PerformerService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_PerformerService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[8/14] Compiling OpenAPIParserTests Test_SessionAndContextService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SessionAndContextService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_SessionAndContextService.swift:48:45: error: missing argument for parameter 'from' in call
+46 |         do {
+47 |             let parser = OpenAPIParser()
+48 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+49 |             
+50 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[9/14] Compiling OpenAPIParserTests Test_CharacterService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[10/14] Compiling OpenAPIParserTests Test_CoreScriptManagementService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CharacterService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CoreScriptManagementService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[11/14] Compiling OpenAPIParserTests Test_ActionService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:21:31: error: cannot assign value of type '[String : AnyCodable]' to type 'OpenAPIDocument'
+19 |         // Parse the YAML string into an `OpenAPIDocument` object.
+20 |         let yamlData = yamlString.data(using: .utf8)!
+21 |         document = try parser.parse(from: yamlData, format: "yaml")
+   |                               `- error: cannot assign value of type '[String : AnyCodable]' to type 'OpenAPIDocument'
+22 |     }
+23 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:33:38: error: value of type 'PathsObject' has no member 'contains'
+31 |         // The `paths` object defines the available endpoints in the API.
+32 |         // Here, we assert that the `/actions` endpoint is correctly included in the parsed document.
+33 |         XCTAssertTrue(document.paths.contains("/actions"), "The '/actions' endpoint is missing in the API specification.")
+   |                                      `- error: value of type 'PathsObject' has no member 'contains'
+34 |         
+35 |         // The `components` object holds reusable definitions such as schemas.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:52:9: error: conflicting arguments to generic parameter 'T' ('SchemaType?' vs. 'String')
+50 |         
+51 |         // Assert that the schema type is `object`, indicating that it represents a JSON object.
+52 |         XCTAssertEqual(schema.type, "object", "The 'ActionObject' schema should be of type 'object'.")
+   |         `- error: conflicting arguments to generic parameter 'T' ('SchemaType?' vs. 'String')
+53 |         
+54 |         // Verify that the schema includes the required properties `id` and `description`.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:71:41: error: value of type '[String : AnyCodable]' has no member 'info'
+69 |         
+70 |         // Verify that critical information, such as the title, remains unchanged after the round trip.
+71 |         XCTAssertEqual(reParsedDocument.info.title, document.info.title, "The title does not match after round-trip serialization.")
+   |                                         `- error: value of type '[String : AnyCodable]' has no member 'info'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:74:41: error: value of type '[String : AnyCodable]' has no member 'paths'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+74 |         XCTAssertEqual(reParsedDocument.paths.keys, document.paths.keys, "The paths do not match after round-trip serialization.")
+   |                                         `- error: value of type '[String : AnyCodable]' has no member 'paths'
+75 |     }
+76 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:74:68: error: value of type 'PathsObject' has no member 'keys'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+74 |         XCTAssertEqual(reParsedDocument.paths.keys, document.paths.keys, "The paths do not match after round-trip serialization.")
+   |                                                                    `- error: value of type 'PathsObject' has no member 'keys'
+75 |     }
+76 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[12/14] Compiling OpenAPIParserTests Test_CentralSequenceService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:21:31: error: cannot assign value of type '[String : AnyCodable]' to type 'OpenAPIDocument'
+19 |         // Parse the YAML string into an `OpenAPIDocument` object.
+20 |         let yamlData = yamlString.data(using: .utf8)!
+21 |         document = try parser.parse(from: yamlData, format: "yaml")
+   |                               `- error: cannot assign value of type '[String : AnyCodable]' to type 'OpenAPIDocument'
+22 |     }
+23 | 
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:33:38: error: value of type 'PathsObject' has no member 'contains'
+31 |         // The `paths` object defines the available endpoints in the API.
+32 |         // Here, we assert that the `/actions` endpoint is correctly included in the parsed document.
+33 |         XCTAssertTrue(document.paths.contains("/actions"), "The '/actions' endpoint is missing in the API specification.")
+   |                                      `- error: value of type 'PathsObject' has no member 'contains'
+34 |         
+35 |         // The `components` object holds reusable definitions such as schemas.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:52:9: error: conflicting arguments to generic parameter 'T' ('SchemaType?' vs. 'String')
+50 |         
+51 |         // Assert that the schema type is `object`, indicating that it represents a JSON object.
+52 |         XCTAssertEqual(schema.type, "object", "The 'ActionObject' schema should be of type 'object'.")
+   |         `- error: conflicting arguments to generic parameter 'T' ('SchemaType?' vs. 'String')
+53 |         
+54 |         // Verify that the schema includes the required properties `id` and `description`.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:71:41: error: value of type '[String : AnyCodable]' has no member 'info'
+69 |         
+70 |         // Verify that critical information, such as the title, remains unchanged after the round trip.
+71 |         XCTAssertEqual(reParsedDocument.info.title, document.info.title, "The title does not match after round-trip serialization.")
+   |                                         `- error: value of type '[String : AnyCodable]' has no member 'info'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:74:41: error: value of type '[String : AnyCodable]' has no member 'paths'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+74 |         XCTAssertEqual(reParsedDocument.paths.keys, document.paths.keys, "The paths do not match after round-trip serialization.")
+   |                                         `- error: value of type '[String : AnyCodable]' has no member 'paths'
+75 |     }
+76 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_ActionService.swift:74:68: error: value of type 'PathsObject' has no member 'keys'
+72 |         
+73 |         // Ensure that the endpoints (paths) remain intact and correctly parsed.
+74 |         XCTAssertEqual(reParsedDocument.paths.keys, document.paths.keys, "The paths do not match after round-trip serialization.")
+   |                                                                    `- error: value of type 'PathsObject' has no member 'keys'
+75 |     }
+76 | }
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_CentralSequenceService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+[13/15] Compiling OpenAPIParserTests Test_StoryFactoryService.swift
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_StoryFactoryService.swift:17:45: error: missing argument for parameter 'from' in call
+15 |         do {
+16 |             let parser = OpenAPIParser()
+17 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+18 |             
+19 |             // Assert the document structure
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserTests/Test_StoryFactoryService.swift:47:45: error: missing argument for parameter 'from' in call
+45 |         do {
+46 |             let parser = OpenAPIParser()
+47 |             let document = try parser.parse(from: specData)
+   |                                             `- error: missing argument for parameter 'from' in call
+48 |             
+49 |             // Validate specific schema details
+
+/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Sources/OpenAPIParserLib/Parser/OpenAPIParser.swift:12:10: note: 'parse(from:format:)' declared here
+10 | 
+11 | class OpenAPIParser {
+12 |     func parse(from data: Data, format: String) throws -> [String: AnyCodable] {
+   |          `- note: 'parse(from:format:)' declared here
+13 |         switch format {
+14 |         case "json":
+error: fatalError
