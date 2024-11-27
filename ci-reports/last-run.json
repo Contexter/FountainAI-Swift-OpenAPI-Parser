@@ -1,7 +1,7 @@
 {
-    "run_name": "stormy-desert-2592",
-    "timestamp": "2024-11-27T12:01:23.306096+00:00",
+    "run_name": "bright-river-7906",
+    "timestamp": "2024-11-27T12:12:42.046114+00:00",
     "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/stormy-desert-2592"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/bright-river-7906"
 }

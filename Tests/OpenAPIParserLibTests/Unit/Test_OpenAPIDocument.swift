@@ -30,6 +30,46 @@ final class Test_OpenAPIDocument: XCTestCase {
         }
     }
 
+    // --- Additional Test: Focused Validation for 'paths' Key ---
+    func test_OpenAPIDocument_MustHavePaths() throws {
+        // Example OpenAPI YAML with and without 'paths'
+        let validYAML = """
+        openapi: "3.1.0"
+        info:
+          title: "Valid API"
+          version: "1.0.0"
+        paths:
+          /example:
+            get:
+              summary: "Example endpoint"
+        """
+        let invalidYAML = """
+        openapi: "3.1.0"
+        info:
+          title: "Invalid API"
+          version: "1.0.0"
+        """
+
+        // Case 1: Valid YAML with 'paths'
+        do {
+            let document = try YAMLDecoder().decode(OpenAPIDocument.self, from: validYAML)
+            XCTAssertFalse(document.paths.paths.isEmpty, "Valid YAML must have non-empty 'paths'.")
+        } catch {
+            XCTFail("Decoding valid YAML failed: \(error)")
+        }
+
+        // Case 2: Invalid YAML without 'paths'
+        do {
+            _ = try YAMLDecoder().decode(OpenAPIDocument.self, from: invalidYAML)
+            XCTFail("Decoding invalid YAML succeeded, but it should fail due to missing 'paths'.")
+        } catch DecodingError.keyNotFound(let key, _) where key.stringValue == "paths" {
+            // Expected error
+            XCTAssertTrue(true, "Decoding failed as expected due to missing 'paths'.")
+        } catch {
+            XCTFail("Unexpected decoding error for invalid YAML: \(error)")
+        }
+    }
+
     // Validate Core Info
     private func validateCoreInfo(_ document: OpenAPIDocument) {
         XCTAssertEqual(document.openapi, "3.1.0", "OpenAPI version mismatch.")
