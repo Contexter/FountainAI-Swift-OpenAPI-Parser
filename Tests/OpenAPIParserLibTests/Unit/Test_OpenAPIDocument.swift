@@ -20,6 +20,7 @@ final class Test_OpenAPIDocument: XCTestCase {
             XCTAssertFalse(document.info.description?.isEmpty ?? true, "Service description is missing or empty.")
 
             // --- Validate Paths ---
+            XCTAssertFalse(document.paths.paths.isEmpty, "The 'paths' key is empty in the OpenAPI document.")
             if let actionsPath = document.paths.paths["/actions"] {
                 XCTAssertNotNil(actionsPath.get, "GET operation is missing for '/actions'.")
                 XCTAssertNotNil(actionsPath.post, "POST operation is missing for '/actions'.")
@@ -37,11 +38,11 @@ final class Test_OpenAPIDocument: XCTestCase {
 
             // --- Validate Components ---
             guard let components = document.components else {
-                XCTFail("Components are missing from the OpenAPIDocument.")
+                XCTFail("Components are missing from the OpenAPI document.")
                 return
             }
 
-            // Action Schema
+            // Validate Action Schema
             if let actionSchema = components.schemas?["Action"] {
                 if let schemaType = actionSchema.type {
                     XCTAssertEqual(schemaType.rawValue, "object", "Schema 'Action' type mismatch.")
@@ -55,7 +56,7 @@ final class Test_OpenAPIDocument: XCTestCase {
                 XCTFail("Schema 'Action' is missing.")
             }
 
-            // ActionCreateRequest Schema
+            // Validate ActionCreateRequest Schema
             if let actionCreateSchema = components.schemas?["ActionCreateRequest"] {
                 if let schemaType = actionCreateSchema.type {
                     XCTAssertEqual(schemaType.rawValue, "object", "Schema 'ActionCreateRequest' type mismatch.")
@@ -70,11 +71,8 @@ final class Test_OpenAPIDocument: XCTestCase {
 
             // --- Validate Security ---
             if let securitySchemes = components.securitySchemes, let apiKeyAuth = securitySchemes["apiKeyAuth"] {
-                // Unwrapping and validating `SecuritySchemeType`
                 XCTAssertEqual(apiKeyAuth.type.rawValue, "apiKey", "Security scheme 'apiKeyAuth' type mismatch.")
                 XCTAssertEqual(apiKeyAuth.name, "X-API-KEY", "Security scheme 'apiKeyAuth' name mismatch.")
-                
-                // Unwrapping `SecuritySchemeLocation` safely
                 if let location = apiKeyAuth.`in` {
                     XCTAssertEqual(location.rawValue, "header", "Security scheme 'apiKeyAuth' location mismatch.")
                 } else {
@@ -84,8 +82,12 @@ final class Test_OpenAPIDocument: XCTestCase {
                 XCTFail("Security scheme 'apiKeyAuth' is missing.")
             }
 
+        } catch DecodingError.keyNotFound(let key, let context) {
+            XCTFail("Decoding failed: Missing key '\(key.stringValue)'. Context: \(context.debugDescription)")
+        } catch DecodingError.typeMismatch(let type, let context) {
+            XCTFail("Decoding failed: Type mismatch for type '\(type)'. Context: \(context.debugDescription)")
         } catch {
-            XCTFail("Failed to decode OpenAPI YAML from Action_Service: \(error)")
+            XCTFail("Decoding failed with error: \(error)")
         }
     }
 }
