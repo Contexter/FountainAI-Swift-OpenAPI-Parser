@@ -4,10 +4,10 @@ import Yams
 
 final class Test_OpenAPIDocument: XCTestCase {
 
-    func test_ActionService_OpenAPIDocument_ComprehensiveValidation() throws {
-        // Fetch YAML content dynamically from Action_Service
-        let yamlContent = Action_Service.yaml
-        XCTAssertFalse(yamlContent.isEmpty, "YAML content in Action_Service is empty.")
+    func test_CentralSequenceService_OpenAPIDocument_ComprehensiveValidation() throws {
+        // Fetch YAML content dynamically from Central_Sequence_Service
+        let yamlContent = Central_Sequence_Service.yaml
+        XCTAssertFalse(yamlContent.isEmpty, "YAML content in Central_Sequence_Service is empty.")
 
         // Ensure 'paths' key exists before decoding
         XCTAssertTrue(yamlContent.contains("paths:"), "YAML content does not contain the 'paths' key.")
@@ -33,7 +33,7 @@ final class Test_OpenAPIDocument: XCTestCase {
     // Validate Core Info
     private func validateCoreInfo(_ document: OpenAPIDocument) {
         XCTAssertEqual(document.openapi, "3.1.0", "OpenAPI version mismatch.")
-        XCTAssertEqual(document.info.title, "Action Service", "Service title mismatch.")
+        XCTAssertEqual(document.info.title, "Central Sequence Service API", "Service title mismatch.")
         XCTAssertEqual(document.info.version, "4.0.0", "Service version mismatch.")
         XCTAssertFalse(document.info.description?.isEmpty ?? true, "Service description is missing or empty.")
     }
@@ -42,19 +42,25 @@ final class Test_OpenAPIDocument: XCTestCase {
     private func validatePaths(_ paths: PathsObject) {
         XCTAssertFalse(paths.paths.isEmpty, "The 'paths' key is empty in the OpenAPI document.")
 
-        if let actionsPath = paths.paths["/actions"] {
-            XCTAssertNotNil(actionsPath.get, "GET operation is missing for '/actions'.")
-            XCTAssertNotNil(actionsPath.post, "POST operation is missing for '/actions'.")
+        // Validate /sequence path
+        if let sequencePath = paths.paths["/sequence"] {
+            XCTAssertNotNil(sequencePath.post, "POST operation is missing for '/sequence'.")
         } else {
-            XCTFail("Path '/actions' is missing.")
+            XCTFail("Path '/sequence' is missing.")
         }
 
-        if let actionsByIdPath = paths.paths["/actions/{actionId}"] {
-            XCTAssertNotNil(actionsByIdPath.get, "GET operation is missing for '/actions/{actionId}'.")
-            XCTAssertNotNil(actionsByIdPath.patch, "PATCH operation is missing for '/actions/{actionId}'.")
-            XCTAssertNotNil(actionsByIdPath.delete, "DELETE operation is missing for '/actions/{actionId}'.")
+        // Validate /sequence/reorder path
+        if let reorderPath = paths.paths["/sequence/reorder"] {
+            XCTAssertNotNil(reorderPath.put, "PUT operation is missing for '/sequence/reorder'.")
         } else {
-            XCTFail("Path '/actions/{actionId}' is missing.")
+            XCTFail("Path '/sequence/reorder' is missing.")
+        }
+
+        // Validate /sequence/version path
+        if let versionPath = paths.paths["/sequence/version"] {
+            XCTAssertNotNil(versionPath.post, "POST operation is missing for '/sequence/version'.")
+        } else {
+            XCTFail("Path '/sequence/version' is missing.")
         }
     }
 
@@ -65,23 +71,23 @@ final class Test_OpenAPIDocument: XCTestCase {
             return
         }
 
-        // Validate Action Schema
-        if let actionSchema = components.schemas?["Action"] {
-            XCTAssertEqual(actionSchema.type?.rawValue, "object", "Schema 'Action' type mismatch.")
-            XCTAssertNotNil(actionSchema.properties?["actionId"], "Property 'actionId' is missing in 'Action' schema.")
-            XCTAssertNotNil(actionSchema.properties?["description"], "Property 'description' is missing in 'Action' schema.")
-            XCTAssertNotNil(actionSchema.properties?["characterId"], "Property 'characterId' is missing in 'Action' schema.")
+        // Validate SequenceRequest Schema
+        if let sequenceRequestSchema = components.schemas?["SequenceRequest"] {
+            XCTAssertEqual(sequenceRequestSchema.type?.rawValue, "object", "Schema 'SequenceRequest' type mismatch.")
+            XCTAssertNotNil(sequenceRequestSchema.properties?["elementType"], "Property 'elementType' is missing in 'SequenceRequest' schema.")
+            XCTAssertNotNil(sequenceRequestSchema.properties?["elementId"], "Property 'elementId' is missing in 'SequenceRequest' schema.")
+            XCTAssertNotNil(sequenceRequestSchema.properties?["comment"], "Property 'comment' is missing in 'SequenceRequest' schema.")
         } else {
-            XCTFail("Schema 'Action' is missing.")
+            XCTFail("Schema 'SequenceRequest' is missing.")
         }
 
-        // Validate ActionCreateRequest Schema
-        if let actionCreateSchema = components.schemas?["ActionCreateRequest"] {
-            XCTAssertEqual(actionCreateSchema.type?.rawValue, "object", "Schema 'ActionCreateRequest' type mismatch.")
-            XCTAssertNotNil(actionCreateSchema.properties?["description"], "Property 'description' is missing in 'ActionCreateRequest' schema.")
-            XCTAssertNotNil(actionCreateSchema.properties?["characterId"], "Property 'characterId' is missing in 'ActionCreateRequest' schema.")
+        // Validate SequenceResponse Schema
+        if let sequenceResponseSchema = components.schemas?["SequenceResponse"] {
+            XCTAssertEqual(sequenceResponseSchema.type?.rawValue, "object", "Schema 'SequenceResponse' type mismatch.")
+            XCTAssertNotNil(sequenceResponseSchema.properties?["sequenceNumber"], "Property 'sequenceNumber' is missing in 'SequenceResponse' schema.")
+            XCTAssertNotNil(sequenceResponseSchema.properties?["comment"], "Property 'comment' is missing in 'SequenceResponse' schema.")
         } else {
-            XCTFail("Schema 'ActionCreateRequest' is missing.")
+            XCTFail("Schema 'SequenceResponse' is missing.")
         }
     }
 
