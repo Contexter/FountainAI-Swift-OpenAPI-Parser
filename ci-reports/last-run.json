@@ -1,7 +1,7 @@
 {
-    "run_name": "sunny-valley-6341",
-    "timestamp": "2024-11-27T05:24:15.146016+00:00",
+    "run_name": "stormy-mountain-6665",
+    "timestamp": "2024-11-27T05:57:10.116375+00:00",
     "build_status": "success",
-    "test_status": "success",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/sunny-valley-6341"
+    "test_status": "failure",
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/stormy-mountain-6665"
 }
