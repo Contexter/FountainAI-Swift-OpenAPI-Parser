@@ -9,6 +9,9 @@ final class Test_OpenAPIDocument: XCTestCase {
         let yamlContent = Action_Service.yaml
         XCTAssertFalse(yamlContent.isEmpty, "YAML content in Action_Service is empty.")
 
+        // Ensure 'paths' key exists before decoding
+        XCTAssertTrue(yamlContent.contains("paths:"), "YAML content does not contain the 'paths' key.")
+
         do {
             // Decode YAML into OpenAPIDocument using Yams
             let document = try YAMLDecoder().decode(OpenAPIDocument.self, from: yamlContent)
