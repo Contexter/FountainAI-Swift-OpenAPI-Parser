@@ -21,9 +21,9 @@ let package = Package(
             path: "Sources/OpenAPIParserLib"
         ),
         .testTarget(
-            name: "OpenAPIParserTests",
+            name: "OpenAPIParserLibTests",
             dependencies: ["OpenAPIParserLib"],
-            path: "Tests/OpenAPIParserTests"
+            path: "Tests/OpenAPIParserLibTests"
         ),
     ]
 )

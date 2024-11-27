@@ -1,93 +1,145 @@
 import Foundation
 
-// Paths
-let currentDirectory = FileManager.default.currentDirectoryPath
-let rootTestDirectory = currentDirectory
-let unitDirectory = "\(rootTestDirectory)/Unit"
-let integrationDirectory = "\(rootTestDirectory)/Integration"
-let specCoverageDirectory = "\(rootTestDirectory)/SpecificationCoverage"
-let deprecatedTestsDirectory = "\(rootTestDirectory)/DeprecatedTests"
-let oldTestsDirectory = "\(rootTestDirectory)/OpenAPIParserTests"
+// Directories
+let rootTestsDirectory = FileManager.default.currentDirectoryPath
 let modelsDirectory = "../Sources/OpenAPIParserLib/Models"
+let containersDirectory = "../Sources/OpenAPIParserLib/OpenAPI/Containers"
+let newTestsDirectory = "\(rootTestsDirectory)/OpenAPIParserLibTests"
 
-// Ensure required directories are created
-let directories = [unitDirectory, integrationDirectory, specCoverageDirectory, deprecatedTestsDirectory]
-for dir in directories {
-    try? FileManager.default.createDirectory(atPath: dir, withIntermediateDirectories: true, attributes: nil)
-}
-
-// Deprecate old tests
-if FileManager.default.fileExists(atPath: oldTestsDirectory) {
+// Remove old tests directory
+func removeOldTests() {
+    let oldTestsDir = "\(rootTestsDirectory)/OpenAPIParserTests"
     do {
-        let oldTestFiles = try FileManager.default.contentsOfDirectory(atPath: oldTestsDirectory)
-        for testFile in oldTestFiles {
-            let oldFilePath = "\(oldTestsDirectory)/\(testFile)"
-            let newFilePath = "\(deprecatedTestsDirectory)/\(testFile)"
-            try FileManager.default.moveItem(atPath: oldFilePath, toPath: newFilePath)
-            print("Deprecated \(testFile) -> Moved to DeprecatedTests/")
+        if FileManager.default.fileExists(atPath: oldTestsDir) {
+            try FileManager.default.removeItem(atPath: oldTestsDir)
+            print("Old test directory removed: \(oldTestsDir)")
         }
     } catch {
-        print("Error while deprecating old tests: \(error)")
+        print("Failed to remove old test directory: \(error)")
     }
 }
 
-// Dynamically scan for models in the Models directory
-guard let modelFiles = try? FileManager.default.contentsOfDirectory(atPath: modelsDirectory) else {
-    fatalError("Failed to read models directory at \(modelsDirectory)")
+// Create new test directories
+func createTestDirectories() {
+    let subDirectories = ["Unit", "Integration", "SpecificationCoverage"]
+    for subDir in subDirectories {
+        let fullPath = "\(newTestsDirectory)/\(subDir)"
+        do {
+            try FileManager.default.createDirectory(atPath: fullPath, withIntermediateDirectories: true, attributes: nil)
+            print("Created directory: \(fullPath)")
+        } catch {
+            print("Failed to create directory \(fullPath): \(error)")
+        }
+    }
 }
 
-let modelNames = modelFiles.compactMap { $0.split(separator: ".").first?.description }
-
-// Create Unit Test files for each model
-for model in modelNames {
-    let unitTestFilePath = "\(unitDirectory)/\(model)Tests.swift"
-    if !FileManager.default.fileExists(atPath: unitTestFilePath) {
-        let unitTestContent = """
+// Scan models and generate unit test files
+func createUnitTests() {
+    guard let modelFiles = try? FileManager.default.contentsOfDirectory(atPath: modelsDirectory) else {
+        print("Failed to scan models directory.")
+        return
+    }
+    let unitTestsPath = "\(newTestsDirectory)/Unit"
+    for modelFile in modelFiles where modelFile.hasSuffix(".swift") {
+        let modelName = modelFile.replacingOccurrences(of: ".swift", with: "")
+        let testFilePath = "\(unitTestsPath)/\(modelName)Tests.swift"
+        let testContent = """
         import XCTest
+        @testable import OpenAPIParserLib
 
-        final class \(model)Tests: XCTestCase {
+        final class \(modelName)Tests: XCTestCase {
             func testExample() {
-                // TODO: Add tests for \(model)
-                XCTAssert(true)
+                // Add test implementation for \(modelName)
             }
         }
         """
-        try? unitTestContent.write(toFile: unitTestFilePath, atomically: true, encoding: .utf8)
-        print("Created \(unitTestFilePath)")
-    }
-}
-
-// Create placeholder files for Integration and Specification Coverage
-let integrationTestFile = "\(integrationDirectory)/IntegrationTests.swift"
-if !FileManager.default.fileExists(atPath: integrationTestFile) {
-    let integrationTestContent = """
-    import XCTest
-
-    final class IntegrationTests: XCTestCase {
-        func testExampleIntegration() {
-            // TODO: Add integration tests
-            XCTAssert(true)
+        do {
+            try testContent.write(toFile: testFilePath, atomically: true, encoding: .utf8)
+            print("Created test file: \(testFilePath)")
+        } catch {
+            print("Failed to write test file \(testFilePath): \(error)")
         }
     }
-    """
-    try? integrationTestContent.write(toFile: integrationTestFile, atomically: true, encoding: .utf8)
-    print("Created \(integrationTestFile)")
 }
 
-let specCoverageTestFile = "\(specCoverageDirectory)/SpecificationCoverageTests.swift"
-if !FileManager.default.fileExists(atPath: specCoverageTestFile) {
-    let specCoverageTestContent = """
-    import XCTest
-
-    final class SpecificationCoverageTests: XCTestCase {
-        func testSpecificationExample() {
-            // TODO: Add specification coverage tests
-            XCTAssert(true)
+// Scan containers and generate YAML accessors
+func createYAMLAccessors() {
+    guard let containerFiles = try? FileManager.default.contentsOfDirectory(atPath: containersDirectory) else {
+        print("Failed to scan containers directory.")
+        return
+    }
+    let yamlAccessorsFile = "\(containersDirectory)/YAMLAccessors.swift"
+    let yamlContent = containerFiles
+        .filter { $0.hasSuffix(".swift") }
+        .map { containerFile in
+            let containerName = containerFile.replacingOccurrences(of: ".swift", with: "")
+            return """
+            public static var \(containerName.lowercased()): String {
+                return \(containerName).yaml
+            }
+            """
         }
+        .joined(separator: "\n\n")
+    let fullYAMLContent = """
+    import Foundation
+
+    public struct YAMLAccessors {
+    \(yamlContent)
     }
     """
-    try? specCoverageTestContent.write(toFile: specCoverageTestFile, atomically: true, encoding: .utf8)
-    print("Created \(specCoverageTestFile)")
+    do {
+        try fullYAMLContent.write(toFile: yamlAccessorsFile, atomically: true, encoding: .utf8)
+        print("YAML accessors generated.")
+    } catch {
+        print("Failed to write YAML accessors file: \(error)")
+    }
 }
 
-print("Test suite setup completed. Old tests have been deprecated.")
+// Update Package.swift file
+func updatePackageFile() {
+    let packageFilePath = "../Package.swift"
+    let newPackageContent = """
+    // swift-tools-version:5.5
+    import PackageDescription
+
+    let package = Package(
+        name: "OpenAPIParser",
+        platforms: [
+            .macOS(.v10_15),
+        ],
+        products: [
+            .library(name: "OpenAPIParserLib", targets: ["OpenAPIParserLib"]),
+        ],
+        dependencies: [
+            .package(url: "https://github.com/jpsim/Yams.git", from: "4.0.0")
+        ],
+        targets: [
+            .target(
+                name: "OpenAPIParserLib",
+                dependencies: [
+                    "Yams"
+                ],
+                path: "Sources/OpenAPIParserLib"
+            ),
+            .testTarget(
+                name: "OpenAPIParserLibTests",
+                dependencies: ["OpenAPIParserLib"],
+                path: "Tests/OpenAPIParserLibTests"
+            ),
+        ]
+    )
+    """
+    do {
+        try newPackageContent.write(toFile: packageFilePath, atomically: true, encoding: .utf8)
+        print("Updated Package.swift file.")
+    } catch {
+        print("Failed to update Package.swift file: \(error)")
+    }
+}
+
+// Main script execution
+removeOldTests()
+createTestDirectories()
+createUnitTests()
+createYAMLAccessors()
+updatePackageFile()

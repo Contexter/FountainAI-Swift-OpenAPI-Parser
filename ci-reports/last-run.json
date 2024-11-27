@@ -1,7 +1,7 @@
 {
-    "run_name": "fuzzy-star-1105",
-    "timestamp": "2024-11-25T04:13:54.993469+00:00",
+    "run_name": "lucky-mountain-7373",
+    "timestamp": "2024-11-27T03:41:48.961613+00:00",
     "build_status": "success",
-    "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/fuzzy-star-1105"
+    "test_status": "success",
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/lucky-mountain-7373"
 }

@@ -1,0 +1,455 @@
+Building for debugging...
+[0/3] Write swift-version--58304C5D6DBC2206.txt
+[2/60] Compiling OpenAPIParserLibTests EncodingObjectTests.swift
+[3/60] Compiling OpenAPIParserLibTests ExampleObjectTests.swift
+[4/60] Compiling OpenAPIParserLibTests ExternalDocumentationObjectTests.swift
+[5/60] Compiling OpenAPIParserLibTests HeaderObjectTests.swift
+[6/60] Compiling OpenAPIParserLibTests InfoObjectTests.swift
+[7/60] Compiling OpenAPIParserLibTests LinkObjectTests.swift
+[8/60] Compiling OpenAPIParserLibTests MediaTypeObjectTests.swift
+[9/60] Compiling OpenAPIParserLibTests OAuthFlowObjectTests.swift
+[10/67] Compiling OpenAPIParserLibTests OAuthFlowsObjectTests.swift
+[11/67] Compiling OpenAPIParserLibTests OpenAPIDocumentTests.swift
+[12/67] Compiling OpenAPIParserLibTests OperationObjectTests.swift
+[13/67] Compiling OpenAPIParserLibTests ParameterObjectTests.swift
+[14/67] Compiling OpenAPIParserLibTests PathItemObjectTests.swift
+[15/67] Compiling OpenAPIParserLibTests PathsObjectTests.swift
+[16/67] Compiling OpenAPIParserLibTests RequestBodyObjectTests.swift
+[17/67] Compiling OpenAPIParserLibTests ResponseObjectTests.swift
+[18/67] Compiling OpenAPIParserLibTests IntegrationTestsPlaceholder.swift
+[19/67] Compiling OpenAPIParserLibTests YAMLAccessorsTests.swift
+[20/67] Compiling OpenAPIParserLibTests SpecificationCoverageTestsPlaceholder.swift
+[21/67] Compiling OpenAPIParserLibTests AdditionalPropertiesTests.swift
+[22/67] Compiling OpenAPIParserLibTests CallbackObjectTests.swift
+[23/67] Compiling OpenAPIParserLibTests ComponentsObjectTests.swift
+[24/67] Compiling OpenAPIParserLibTests DiscriminatorObjectTests.swift
+[25/67] Compiling OpenAPIParserLibTests DynamicCodingKeysTests.swift
+[26/67] Compiling OpenAPIParserLibTests Test_PathItemObject.swift
+[27/67] Compiling OpenAPIParserLibTests Test_PathsObject.swift
+[28/67] Compiling OpenAPIParserLibTests Test_RequestBodyObject.swift
+[29/67] Compiling OpenAPIParserLibTests Test_ResponseObject.swift
+[30/67] Compiling OpenAPIParserLibTests Test_ResponsesObject.swift
+[31/67] Compiling OpenAPIParserLibTests Test_SchemaObject.swift
+[32/67] Compiling OpenAPIParserLibTests Test_SecurityRequirementObject.swift
+[33/67] Compiling OpenAPIParserLibTests Test_SecuritySchemeObject.swift
+[34/67] Compiling OpenAPIParserLibTests Test_CallbackObject.swift
+[35/67] Compiling OpenAPIParserLibTests Test_ComponentsObject.swift
+[36/67] Compiling OpenAPIParserLibTests Test_DiscriminatorObject.swift
+[37/67] Compiling OpenAPIParserLibTests Test_DynamicCodingKeys.swift
+[38/67] Compiling OpenAPIParserLibTests Test_EncodingObject.swift
+[39/67] Compiling OpenAPIParserLibTests Test_ExampleObject.swift
+[40/67] Compiling OpenAPIParserLibTests Test_ExternalDocumentationObject.swift
+[41/67] Compiling OpenAPIParserLibTests Test_HeaderObject.swift
+[42/67] Compiling OpenAPIParserLibTests ResponsesObjectTests.swift
+[43/67] Compiling OpenAPIParserLibTests SchemaObjectTests.swift
+[44/67] Compiling OpenAPIParserLibTests SecurityRequirementObjectTests.swift
+[45/67] Compiling OpenAPIParserLibTests SecuritySchemeObjectTests.swift
+[46/67] Compiling OpenAPIParserLibTests ServerObjectTests.swift
+[47/67] Compiling OpenAPIParserLibTests TagObjectTests.swift
+[48/67] Compiling OpenAPIParserLibTests Test_.swift
+[49/67] Compiling OpenAPIParserLibTests Test_AdditionalProperties.swift
+[50/67] Emitting module OpenAPIParserLibTests
+[51/67] Compiling OpenAPIParserLibTests Test_InfoObject.swift
+[52/67] Compiling OpenAPIParserLibTests Test_LinkObject.swift
+[53/67] Compiling OpenAPIParserLibTests Test_MediaTypeObject.swift
+[54/67] Compiling OpenAPIParserLibTests Test_OAuthFlowObject.swift
+[55/67] Compiling OpenAPIParserLibTests Test_OAuthFlowsObject.swift
+[56/67] Compiling OpenAPIParserLibTests Test_OpenAPIDocument.swift
+[57/67] Compiling OpenAPIParserLibTests Test_OperationObject.swift
+[58/67] Compiling OpenAPIParserLibTests Test_ParameterObject.swift
+[59/67] Compiling OpenAPIParserLibTests Test_ServerObject.swift
+[60/67] Compiling OpenAPIParserLibTests Test_TagObject.swift
+[61/67] Compiling OpenAPIParserLibTests Test_Validatable.swift
+[62/67] Compiling OpenAPIParserLibTests Test_XMLObject.swift
+[63/67] Compiling OpenAPIParserLibTests Tests.swift
+[64/67] Compiling OpenAPIParserLibTests ValidatableTests.swift
+[65/67] Compiling OpenAPIParserLibTests XMLObjectTests.swift
+[66/69] Emitting module OpenAPIParserPackageTests
+[67/69] Compiling OpenAPIParserPackageTests runner.swift
+[67/69] Write Objects.LinkFileList
+[68/69] Linking OpenAPIParserPackageTests
+Build complete! (2.43s)
+Test Suite 'All tests' started at 2024-11-27 04:41:48.907.
+Test Suite 'OpenAPIParserPackageTests.xctest' started at 2024-11-27 04:41:48.908.
+Test Suite 'AdditionalPropertiesTests' started at 2024-11-27 04:41:48.908.
+Test Case '-[OpenAPIParserLibTests.AdditionalPropertiesTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.AdditionalPropertiesTests testExample]' passed (0.001 seconds).
+Test Suite 'AdditionalPropertiesTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'CallbackObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.CallbackObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.CallbackObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'CallbackObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ComponentsObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.ComponentsObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ComponentsObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ComponentsObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'DiscriminatorObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.DiscriminatorObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.DiscriminatorObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'DiscriminatorObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'DynamicCodingKeysTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.DynamicCodingKeysTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.DynamicCodingKeysTests testExample]' passed (0.000 seconds).
+Test Suite 'DynamicCodingKeysTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'EncodingObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.EncodingObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.EncodingObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'EncodingObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ExampleObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.ExampleObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ExampleObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ExampleObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ExternalDocumentationObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.ExternalDocumentationObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ExternalDocumentationObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ExternalDocumentationObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'HeaderObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.HeaderObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.HeaderObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'HeaderObjectTests' passed at 2024-11-27 04:41:48.909.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'InfoObjectTests' started at 2024-11-27 04:41:48.909.
+Test Case '-[OpenAPIParserLibTests.InfoObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.InfoObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'InfoObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'IntegrationTestsPlaceholder' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.IntegrationTestsPlaceholder test_IntegrationExample]' started.
+Test Case '-[OpenAPIParserLibTests.IntegrationTestsPlaceholder test_IntegrationExample]' passed (0.000 seconds).
+Test Suite 'IntegrationTestsPlaceholder' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'LinkObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.LinkObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.LinkObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'LinkObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'MediaTypeObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.MediaTypeObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.MediaTypeObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'MediaTypeObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'OAuthFlowObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.OAuthFlowObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.OAuthFlowObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'OAuthFlowObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'OAuthFlowsObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.OAuthFlowsObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.OAuthFlowsObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'OAuthFlowsObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'OpenAPIDocumentTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.OpenAPIDocumentTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.OpenAPIDocumentTests testExample]' passed (0.000 seconds).
+Test Suite 'OpenAPIDocumentTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'OperationObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.OperationObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.OperationObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'OperationObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ParameterObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.ParameterObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ParameterObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ParameterObjectTests' passed at 2024-11-27 04:41:48.910.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'PathItemObjectTests' started at 2024-11-27 04:41:48.910.
+Test Case '-[OpenAPIParserLibTests.PathItemObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.PathItemObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'PathItemObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'PathsObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.PathsObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.PathsObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'PathsObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'RequestBodyObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.RequestBodyObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.RequestBodyObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'RequestBodyObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ResponseObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.ResponseObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ResponseObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ResponseObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ResponsesObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.ResponsesObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ResponsesObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ResponsesObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'SchemaObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.SchemaObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.SchemaObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'SchemaObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'SecurityRequirementObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.SecurityRequirementObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.SecurityRequirementObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'SecurityRequirementObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'SecuritySchemeObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.SecuritySchemeObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.SecuritySchemeObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'SecuritySchemeObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ServerObjectTests' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.ServerObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ServerObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'ServerObjectTests' passed at 2024-11-27 04:41:48.911.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'SpecificationCoverageTestsPlaceholder' started at 2024-11-27 04:41:48.911.
+Test Case '-[OpenAPIParserLibTests.SpecificationCoverageTestsPlaceholder test_SpecificationCoverageExample]' started.
+Test Case '-[OpenAPIParserLibTests.SpecificationCoverageTestsPlaceholder test_SpecificationCoverageExample]' passed (0.000 seconds).
+Test Suite 'SpecificationCoverageTestsPlaceholder' passed at 2024-11-27 04:41:48.912.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'TagObjectTests' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.TagObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.TagObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'TagObjectTests' passed at 2024-11-27 04:41:48.912.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.Test_ test__Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ test__Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ test__Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ test__Validation]' passed (0.000 seconds).
+Test Suite 'Test_' passed at 2024-11-27 04:41:48.912.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_AdditionalProperties' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.Test_AdditionalProperties test_AdditionalProperties_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_AdditionalProperties test_AdditionalProperties_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_AdditionalProperties test_AdditionalProperties_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_AdditionalProperties test_AdditionalProperties_Validation]' passed (0.000 seconds).
+Test Suite 'Test_AdditionalProperties' passed at 2024-11-27 04:41:48.912.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_CallbackObject' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.Test_CallbackObject test_CallbackObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_CallbackObject test_CallbackObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_CallbackObject test_CallbackObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_CallbackObject test_CallbackObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_CallbackObject' passed at 2024-11-27 04:41:48.912.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ComponentsObject' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.Test_ComponentsObject test_ComponentsObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ComponentsObject test_ComponentsObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ComponentsObject test_ComponentsObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ComponentsObject test_ComponentsObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ComponentsObject' passed at 2024-11-27 04:41:48.912.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_DiscriminatorObject' started at 2024-11-27 04:41:48.912.
+Test Case '-[OpenAPIParserLibTests.Test_DiscriminatorObject test_DiscriminatorObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_DiscriminatorObject test_DiscriminatorObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_DiscriminatorObject test_DiscriminatorObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_DiscriminatorObject test_DiscriminatorObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_DiscriminatorObject' passed at 2024-11-27 04:41:48.913.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_DynamicCodingKeys' started at 2024-11-27 04:41:48.913.
+Test Case '-[OpenAPIParserLibTests.Test_DynamicCodingKeys test_DynamicCodingKeys_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_DynamicCodingKeys test_DynamicCodingKeys_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_DynamicCodingKeys test_DynamicCodingKeys_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_DynamicCodingKeys test_DynamicCodingKeys_Validation]' passed (0.000 seconds).
+Test Suite 'Test_DynamicCodingKeys' passed at 2024-11-27 04:41:48.913.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_EncodingObject' started at 2024-11-27 04:41:48.913.
+Test Case '-[OpenAPIParserLibTests.Test_EncodingObject test_EncodingObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_EncodingObject test_EncodingObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_EncodingObject test_EncodingObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_EncodingObject test_EncodingObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_EncodingObject' passed at 2024-11-27 04:41:48.913.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ExampleObject' started at 2024-11-27 04:41:48.913.
+Test Case '-[OpenAPIParserLibTests.Test_ExampleObject test_ExampleObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ExampleObject test_ExampleObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ExampleObject test_ExampleObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ExampleObject test_ExampleObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ExampleObject' passed at 2024-11-27 04:41:48.913.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ExternalDocumentationObject' started at 2024-11-27 04:41:48.913.
+Test Case '-[OpenAPIParserLibTests.Test_ExternalDocumentationObject test_ExternalDocumentationObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ExternalDocumentationObject test_ExternalDocumentationObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ExternalDocumentationObject test_ExternalDocumentationObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ExternalDocumentationObject test_ExternalDocumentationObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ExternalDocumentationObject' passed at 2024-11-27 04:41:48.913.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_HeaderObject' started at 2024-11-27 04:41:48.913.
+Test Case '-[OpenAPIParserLibTests.Test_HeaderObject test_HeaderObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_HeaderObject test_HeaderObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_HeaderObject test_HeaderObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_HeaderObject test_HeaderObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_HeaderObject' passed at 2024-11-27 04:41:48.914.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_InfoObject' started at 2024-11-27 04:41:48.914.
+Test Case '-[OpenAPIParserLibTests.Test_InfoObject test_InfoObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_InfoObject test_InfoObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_InfoObject test_InfoObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_InfoObject test_InfoObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_InfoObject' passed at 2024-11-27 04:41:48.914.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_LinkObject' started at 2024-11-27 04:41:48.914.
+Test Case '-[OpenAPIParserLibTests.Test_LinkObject test_LinkObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_LinkObject test_LinkObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_LinkObject test_LinkObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_LinkObject test_LinkObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_LinkObject' passed at 2024-11-27 04:41:48.914.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_MediaTypeObject' started at 2024-11-27 04:41:48.914.
+Test Case '-[OpenAPIParserLibTests.Test_MediaTypeObject test_MediaTypeObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_MediaTypeObject test_MediaTypeObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_MediaTypeObject test_MediaTypeObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_MediaTypeObject test_MediaTypeObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_MediaTypeObject' passed at 2024-11-27 04:41:48.914.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_OAuthFlowObject' started at 2024-11-27 04:41:48.914.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowObject test_OAuthFlowObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowObject test_OAuthFlowObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowObject test_OAuthFlowObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowObject test_OAuthFlowObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_OAuthFlowObject' passed at 2024-11-27 04:41:48.914.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_OAuthFlowsObject' started at 2024-11-27 04:41:48.914.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowsObject test_OAuthFlowsObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowsObject test_OAuthFlowsObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowsObject test_OAuthFlowsObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OAuthFlowsObject test_OAuthFlowsObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_OAuthFlowsObject' passed at 2024-11-27 04:41:48.915.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_OpenAPIDocument' started at 2024-11-27 04:41:48.915.
+Test Case '-[OpenAPIParserLibTests.Test_OpenAPIDocument test_OpenAPIDocument_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OpenAPIDocument test_OpenAPIDocument_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_OpenAPIDocument test_OpenAPIDocument_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OpenAPIDocument test_OpenAPIDocument_Validation]' passed (0.000 seconds).
+Test Suite 'Test_OpenAPIDocument' passed at 2024-11-27 04:41:48.915.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_OperationObject' started at 2024-11-27 04:41:48.915.
+Test Case '-[OpenAPIParserLibTests.Test_OperationObject test_OperationObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OperationObject test_OperationObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_OperationObject test_OperationObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_OperationObject test_OperationObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_OperationObject' passed at 2024-11-27 04:41:48.915.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ParameterObject' started at 2024-11-27 04:41:48.915.
+Test Case '-[OpenAPIParserLibTests.Test_ParameterObject test_ParameterObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ParameterObject test_ParameterObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ParameterObject test_ParameterObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ParameterObject test_ParameterObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ParameterObject' passed at 2024-11-27 04:41:48.915.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_PathItemObject' started at 2024-11-27 04:41:48.915.
+Test Case '-[OpenAPIParserLibTests.Test_PathItemObject test_PathItemObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_PathItemObject test_PathItemObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_PathItemObject test_PathItemObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_PathItemObject test_PathItemObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_PathItemObject' passed at 2024-11-27 04:41:48.915.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_PathsObject' started at 2024-11-27 04:41:48.915.
+Test Case '-[OpenAPIParserLibTests.Test_PathsObject test_PathsObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_PathsObject test_PathsObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_PathsObject test_PathsObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_PathsObject test_PathsObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_PathsObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_RequestBodyObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_RequestBodyObject test_RequestBodyObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_RequestBodyObject test_RequestBodyObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_RequestBodyObject test_RequestBodyObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_RequestBodyObject test_RequestBodyObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_RequestBodyObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ResponseObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_ResponseObject test_ResponseObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ResponseObject test_ResponseObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ResponseObject test_ResponseObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ResponseObject test_ResponseObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ResponseObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ResponsesObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_ResponsesObject test_ResponsesObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ResponsesObject test_ResponsesObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ResponsesObject test_ResponsesObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ResponsesObject test_ResponsesObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ResponsesObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_SchemaObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_SchemaObject test_SchemaObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SchemaObject test_SchemaObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_SchemaObject test_SchemaObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SchemaObject test_SchemaObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_SchemaObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_SecurityRequirementObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_SecurityRequirementObject test_SecurityRequirementObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SecurityRequirementObject test_SecurityRequirementObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_SecurityRequirementObject test_SecurityRequirementObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SecurityRequirementObject test_SecurityRequirementObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_SecurityRequirementObject' passed at 2024-11-27 04:41:48.916.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_SecuritySchemeObject' started at 2024-11-27 04:41:48.916.
+Test Case '-[OpenAPIParserLibTests.Test_SecuritySchemeObject test_SecuritySchemeObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SecuritySchemeObject test_SecuritySchemeObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_SecuritySchemeObject test_SecuritySchemeObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_SecuritySchemeObject test_SecuritySchemeObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_SecuritySchemeObject' passed at 2024-11-27 04:41:48.917.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_ServerObject' started at 2024-11-27 04:41:48.917.
+Test Case '-[OpenAPIParserLibTests.Test_ServerObject test_ServerObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ServerObject test_ServerObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_ServerObject test_ServerObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_ServerObject test_ServerObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_ServerObject' passed at 2024-11-27 04:41:48.917.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_TagObject' started at 2024-11-27 04:41:48.917.
+Test Case '-[OpenAPIParserLibTests.Test_TagObject test_TagObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_TagObject test_TagObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_TagObject test_TagObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_TagObject test_TagObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_TagObject' passed at 2024-11-27 04:41:48.917.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_Validatable' started at 2024-11-27 04:41:48.917.
+Test Case '-[OpenAPIParserLibTests.Test_Validatable test_Validatable_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_Validatable test_Validatable_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_Validatable test_Validatable_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_Validatable test_Validatable_Validation]' passed (0.000 seconds).
+Test Suite 'Test_Validatable' passed at 2024-11-27 04:41:48.917.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Test_XMLObject' started at 2024-11-27 04:41:48.917.
+Test Case '-[OpenAPIParserLibTests.Test_XMLObject test_XMLObject_Decoding]' started.
+Test Case '-[OpenAPIParserLibTests.Test_XMLObject test_XMLObject_Decoding]' passed (0.000 seconds).
+Test Case '-[OpenAPIParserLibTests.Test_XMLObject test_XMLObject_Validation]' started.
+Test Case '-[OpenAPIParserLibTests.Test_XMLObject test_XMLObject_Validation]' passed (0.000 seconds).
+Test Suite 'Test_XMLObject' passed at 2024-11-27 04:41:48.917.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Tests' started at 2024-11-27 04:41:48.917.
+Test Case '-[OpenAPIParserLibTests.Tests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.Tests testExample]' passed (0.000 seconds).
+Test Suite 'Tests' passed at 2024-11-27 04:41:48.918.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'ValidatableTests' started at 2024-11-27 04:41:48.918.
+Test Case '-[OpenAPIParserLibTests.ValidatableTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.ValidatableTests testExample]' passed (0.000 seconds).
+Test Suite 'ValidatableTests' passed at 2024-11-27 04:41:48.918.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'XMLObjectTests' started at 2024-11-27 04:41:48.918.
+Test Case '-[OpenAPIParserLibTests.XMLObjectTests testExample]' started.
+Test Case '-[OpenAPIParserLibTests.XMLObjectTests testExample]' passed (0.000 seconds).
+Test Suite 'XMLObjectTests' passed at 2024-11-27 04:41:48.918.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'YAMLAccessorsTests' started at 2024-11-27 04:41:48.918.
+Test Case '-[OpenAPIParserLibTests.YAMLAccessorsTests test_YAMLsExist]' started.
+Test Case '-[OpenAPIParserLibTests.YAMLAccessorsTests test_YAMLsExist]' passed (0.000 seconds).
+Test Suite 'YAMLAccessorsTests' passed at 2024-11-27 04:41:48.918.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'OpenAPIParserPackageTests.xctest' passed at 2024-11-27 04:41:48.918.
+	 Executed 93 tests, with 0 failures (0 unexpected) in 0.007 (0.010) seconds
+Test Suite 'All tests' passed at 2024-11-27 04:41:48.918.
+	 Executed 93 tests, with 0 failures (0 unexpected) in 0.007 (0.011) seconds
+◇ Test run started.
+↳ Testing Library Version: 102 (arm64e-apple-macos13.0)
+✔ Test run with 0 tests passed after 0.001 seconds.
