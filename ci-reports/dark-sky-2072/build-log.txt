@@ -1,0 +1,9 @@
+warning: 'fountainai-swift-openapi-parser': found 1 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/Tests/OpenAPIParserLibTests/testing-hierarchy.png
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version--58304C5D6DBC2206.txt
+[3/4] Emitting module OpenAPIParserLib
+[4/4] Compiling OpenAPIParserLib Malformed_OpenAPI.swift
+Build complete! (0.60s)

@@ -1,6 +1,5 @@
-import Foundation
-
 struct Malformed_OpenAPI {
+    // YAML with the `paths` key entirely missing
     static let yamlMissingPaths = """
     openapi: "3.1.0"
     info:
@@ -8,11 +7,12 @@ struct Malformed_OpenAPI {
       version: "1.0.0"
     """
 
-    static let yamlInvalidStructure = """
+    // YAML with an empty `paths` object
+    static let yamlEmptyPaths = """
     openapi: "3.1.0"
     info:
-      title: "Malformed API"
+      title: "Invalid API"
       version: "1.0.0"
-    paths: "This should be an object, not a string."
+    paths: {}
     """
 }

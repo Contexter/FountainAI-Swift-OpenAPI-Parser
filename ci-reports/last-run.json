@@ -1,7 +1,7 @@
 {
-    "run_name": "stormy-river-8705",
-    "timestamp": "2024-11-28T03:08:48.313025+00:00",
+    "run_name": "dark-sky-2072",
+    "timestamp": "2024-11-28T03:28:02.882867+00:00",
     "build_status": "success",
-    "test_status": "success",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/stormy-river-8705"
+    "test_status": "failure",
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/dark-sky-2072"
 }
