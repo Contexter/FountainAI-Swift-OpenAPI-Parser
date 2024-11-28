@@ -1,7 +1,7 @@
 {
-    "run_name": "quiet-sky-6912",
-    "timestamp": "2024-11-28T02:20:44.926906+00:00",
+    "run_name": "quiet-ocean-5753",
+    "timestamp": "2024-11-28T02:52:58.335579+00:00",
     "build_status": "success",
     "test_status": "failure",
-    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/quiet-sky-6912"
+    "ci_dir": "/Users/benedikteickhoff/Development/Github-Desktop/FountainAI-Swift-OpenAPI-Parser/ci-reports/quiet-ocean-5753"
 }
